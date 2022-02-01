@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    font-family: 'montserrat', sans-serif;
+}
+#navigationLinks{
+    margin-left: auto;
+}
+.navbar{
+    background-color: rgba(216, 226, 220, 1);
+}
+.navbar-brand{
+    padding-left: 5rem;
+    color: black;
+    font-size: 1.75rem;
+}
+.nav-item{
+    padding: 1rem;
+}
+.nav-link{
+    color: black;
+}
