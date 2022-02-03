@@ -49,12 +49,32 @@
         </nav>
     </header>
     <main>
+        <h1> Appointment Form</h1>
 <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
 <div class="bootstrap-iso">
     <div class="container-fluid">
      <div class="row">
       <div class="col-md-6 col-sm-6 col-xs-12">
        <form method="post">
+        <div class="form-group ">
+            <label class="control-label ">
+             Appointment type?
+            </label>
+            <div class="">
+             <div class="radio">
+              <label class="radio">
+               <input name="radio" type="radio" value="Consultation"/>
+               Consultation
+              </label>
+             </div>
+             <div class="radio">
+              <label class="radio">
+               <input name="radio" type="radio" value="Tattoo Appointment"/>
+               Tattoo Appointment
+              </label>
+             </div>
+            </div>
+           </div>
         <div class="form-group ">
          <label class="control-label " for="date">
           Date
@@ -136,7 +156,7 @@
    </div>
     </main>
     <!--  jQuery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>Í
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </body>
 
 </html>
