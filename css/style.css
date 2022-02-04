@@ -1,3 +1,4 @@
+/* Styling for all pages */
 * {
     box-sizing: border-box;
     font-family: 'montserrat', sans-serif;
@@ -19,9 +20,21 @@
 .nav-link{
     color: black;
 }
+main{
+  padding: 4rem;
+}
+.btn {
+  background-color: rgba(216, 226, 220, 1);
+  color: black;
+  border: none;
+  pointer-events: none; 
+}
 
+main h1{ /* Page header, ex:Appointment form for schedule page*/
+  padding: 2rem;
+}
 
-
+/* Account Page */
 #wrapper {
     padding-right: 250px;
     transition: all 0.4s ease 0s;
@@ -72,10 +85,17 @@
         width: 250px;
         transition: all 0.4s ease 0s;
       }
-    }
+    }   
 
-    
+.form-group {
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+
 .card {
+    /* padding-left: 10px; */
     padding-left: 10px;
     padding-right: 50px;
+    border: none;
 }

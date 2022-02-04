@@ -15,7 +15,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
     <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
-    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />       
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
 
     <link rel="stylesheet" href="css/style.css">
     <title>Tattoo Portfolio-Schedule</title>
@@ -50,110 +50,116 @@
     </header>
     <main>
         <h1> Appointment Form</h1>
-<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
-<div class="bootstrap-iso">
-    <div class="container-fluid">
-     <div class="row">
-      <div class="col-md-6 col-sm-6 col-xs-12">
-       <form method="post">
-        <div class="form-group ">
-            <label class="control-label ">
-             Appointment type?
-            </label>
-            <div class="">
-             <div class="radio">
-              <label class="radio">
-               <input name="radio" type="radio" value="Consultation"/>
-               Consultation
-              </label>
-             </div>
-             <div class="radio">
-              <label class="radio">
-               <input name="radio" type="radio" value="Tattoo Appointment"/>
-               Tattoo Appointment
-              </label>
-             </div>
+        <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+        <div class="bootstrap-iso">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <form method="post">
+                            <div class="form-group ">
+                                <label class="control-label ">
+                                    Appointment type?
+                                </label>
+                                <div class="">
+                                    <div class="radio">
+                                        <label class="radio">
+                                            <input name="radio" type="radio" value="Consultation" />
+                                            Consultation
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label class="radio">
+                                            <input name="radio" type="radio" value="Tattoo Appointment" />
+                                            Tattoo Appointment
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label " for="date">
+                                    Date
+                                </label>
+                                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY"
+                                    type="text" />
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label " for="select">
+                                    Time
+                                </label>
+                                <select class="select form-control" id="select" name="select">
+                                    <option value="9:00 am">
+                                        9:00 am
+                                    </option>
+                                    <option value="12:00 pm ">
+                                        12:00 pm
+                                    </option>
+                                    <option value="3:00 pm">
+                                        3:00 pm
+                                    </option>
+                                    <option value="6:00 pm">
+                                        6:00 pm
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label " for="name">
+                                    Name
+                                </label>
+                                <input class="form-control" id="name" name="name" type="text" />
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label requiredField" for="email">
+                                    Email
+                                    <span class="asteriskField">
+                                        *
+                                    </span>
+                                </label>
+                                <input class="form-control" id="email" name="email" type="text" />
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label " for="subject">
+                                    Tattoo
+                                </label>
+                                <input class="form-control" id="subject" name="subject" type="text" />
+                                <span class="help-block" id="hint_subject">
+                                    Describe the tattoo you would like to get. Is it a custom design or from the
+                                    artist's portfolio? Placement? Size?
+                                </span>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label " for="subject1">
+                                    Budget
+                                </label>
+                                <input class="form-control" id="subject1" name="subject1" type="text" />
+                                <span class="help-block" id="hint_subject1">
+                                    Provide your maximum budget for the tattoo. Note the artist's minimum fee. Artist
+                                    will contact you with more information on pricing based on your response.
+                                </span>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label " for="message">
+                                    Anything else?
+                                </label>
+                                <textarea class="form-control" cols="40" id="message" name="message"
+                                    rows="10"></textarea>
+                                <span class="help-block" id="hint_message">
+                                    Anything else you would like your artist to know or have questions? Leave them a
+                                    message here.
+                                </span>
+                            </div>
+                            <!-- <div class="form-group"> -->
+                                <!-- <div>                -->
+                                    <!-- <button class="btn btn-primary" name="submit" type="submit">
+                                        Submit
+                                    </button> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                            <button class="btn ">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-           </div>
-        <div class="form-group ">
-         <label class="control-label " for="date">
-          Date
-         </label>
-         <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
         </div>
-        <div class="form-group ">
-         <label class="control-label " for="select">
-          Time
-         </label>
-         <select class="select form-control" id="select" name="select">
-          <option value="9:00 am">
-           9:00 am
-          </option>
-          <option value="12:00 pm ">
-           12:00 pm
-          </option>
-          <option value="3:00 pm">
-           3:00 pm
-          </option>
-          <option value="6:00 pm">
-           6:00 pm
-          </option>
-         </select>
-        </div>
-        <div class="form-group ">
-         <label class="control-label " for="name">
-          Name
-         </label>
-         <input class="form-control" id="name" name="name" type="text"/>
-        </div>
-        <div class="form-group ">
-         <label class="control-label requiredField" for="email">
-          Email
-          <span class="asteriskField">
-           *
-          </span>
-         </label>
-         <input class="form-control" id="email" name="email" type="text"/>
-        </div>
-        <div class="form-group ">
-         <label class="control-label " for="subject">
-          Tattoo
-         </label>
-         <input class="form-control" id="subject" name="subject" type="text"/>
-         <span class="help-block" id="hint_subject">
-          Describe the tattoo you would like to get. Is it a custom design or from the artist's portfolio? Placement? Size?
-         </span>
-        </div>
-        <div class="form-group ">
-         <label class="control-label " for="subject1">
-          Budget
-         </label>
-         <input class="form-control" id="subject1" name="subject1" type="text"/>
-         <span class="help-block" id="hint_subject1">
-          Provide your maximum budget for the tattoo. Note the artist's minimum fee. Artist will contact you with more information on pricing based on your response.
-         </span>
-        </div>
-        <div class="form-group ">
-         <label class="control-label " for="message">
-          Anything else?
-         </label>
-         <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
-         <span class="help-block" id="hint_message">
-          Anything else you would like your artist to know or have questions? Leave them a message here.
-         </span>
-        </div>
-        <div class="form-group">
-         <div>
-          <button class="btn btn-primary " name="submit" type="submit">
-           Submit
-          </button>
-         </div>
-        </div>
-       </form>
-      </div>
-     </div>
-    </div>
-   </div>
     </main>
     <!--  jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>

@@ -63,8 +63,26 @@
   <!-- Page content wrapper-->
   <div id="page-content-wrapper">
       <div class="container-fluid">
-          <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-      </div>
+          <p>Profile Information</p>
+          <div class="tab-pane active" id="profile">
+            <hr>
+            <form>
+              <div class="form-group">
+                <label for="fullName">Name</label>
+                <input type="text" class="form-control" id="fullName" aria-describedby="fullNameHelp" placeholder="Enter your fullname" value="Full Name">
+              </div>
+              <div class="form-group">
+                <label for="url">Email</label>
+                <input type="text" class="form-control" id="url" placeholder="Enter your website address" value="example@uw.edu">
+              </div>
+              <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" class="form-control" id="location" placeholder="Enter your location" value="Seattle, WA">
+              </div>
+              <button class="btn ">Update Profile</button>
+            </form>
+          </div>
+        </div>
   </div>
 </div>
 </main>
