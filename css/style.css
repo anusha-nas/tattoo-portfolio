@@ -139,6 +139,11 @@ main h1{ /* Page header, ex:Appointment form for schedule page*/
   text-decoration: none;
 }
 
+/* Map */
+#map {
+  height: 500px;
+}
+
 /* Media Queries */
 @media (max-width:767px) {
   #wrapper {
@@ -158,5 +163,10 @@ main h1{ /* Page header, ex:Appointment form for schedule page*/
     right: 250px;
     width: 250px;
     transition: all 0.4s ease 0s;
+  }
+
+  #map {
+    height: 300px;
+    width: 400px;
   }
 }

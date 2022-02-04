@@ -16,14 +16,18 @@
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
-    <!-- reference to Leaflet CSS -->
-    <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css" />
-    
-    <!-- reference to Leaflet JavaScript -->
-    <script src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.js"></script>
-    
     <!-- own style -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- reference to Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+
+    <!-- reference to Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
 
     <title>Tattoo Portfolio-Map</title>
 </head>
@@ -54,40 +58,45 @@
     </header>
 
     <main>
-        <!-- place holder for map -->
-        <div id="map"></div>
+        <div>
+            <!-- a placehold of the map -->
+            <div id="map"></div>
+            
+            <script>
+                // create a map object with initial location being the center of Seattle
+                var map = L.map('map').setView([47.6062, -122.3321], 13);
+            
+                //  add base map tiles and attribution info
+                L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
 
-        <script>
-        
-            //  create map object, tell it to live in 'map' div and give initial latitude, longitude, zoom values 
-            var map = L.map('map', {scrollWheelZoom:false}).setView([43.64701, -79.39425], 15);
-        
-            //  add base map tiles from OpenStreetMap and attribution info to 'map' div
-            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-        
-            // create custom icon
-            var firefoxIcon = L.icon({
-                iconUrl: 'http://joshuafrazier.info/images/firefox.svg',
-                iconSize: [38, 95], // size of the icon
-                popupAnchor: [0,-15]
-                });
-        
-            // create popup contents
-            var customPopup = "Mozilla Toronto Offices<br/><img src='http://joshuafrazier.info/images/maptime.gif' alt='maptime logo gif' width='350px'/>";
+                // add a marker to mark the location of TT661 Tatto
+                var marker = L.marker([47.6076, -122.3362]).addTo(map);
+
+                // pop up
+                marker.bindPopup("<b>TT661 Tattoo</b><br>11:00 AM - 3:00 PM").openPopup();
+
+                // marker for Fall Lake
+                var marker = L.marker([47.6237, -122.3178]).addTo(map);
+                marker.bindPopup("<b>Fall Lake</b><br>12:00 AM - 9:00 PM").openPopup();
+
+                // marker for Moonlight Ink
+                var marker = L.marker([47.5971, -122.3221]).addTo(map);
+                marker.bindPopup("<b>Moonlight Ink</b><br>Opens at 11:00 AM").openPopup();
+
+                // find lat & lng
+                // var popup = L.popup();
+                // function onMapClick(e) {
+                //     popup
+                //         .setLatLng(e.latlng)
+                //         .setContent("You clicked the map at " + e.latlng.toString())
+                //         .openOn(map);
+                // }
+                // map.on('click', onMapClick);
             
-            // specify popup options 
-            var customOptions =
-                {
-                'maxWidth': '500',
-                'className' : 'custom'
-                }
-            
-            // create marker object, pass custom icon as option, pass content and options to popup, add to map
-            L.marker([43.64701, -79.39425], {icon: firefoxIcon}).bindPopup(customPopup,customOptions).addTo(map);
-        
-        </script>
+            </script>
+        </div>
     </main>
 
     <footer>
