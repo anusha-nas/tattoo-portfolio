@@ -3,6 +3,20 @@
     box-sizing: border-box;
     font-family: 'montserrat', sans-serif;
 }
+/* #logo img{
+  position: absolute;
+  margin-top:5px;
+  margin-left:15px;
+  height: auto;
+  width: auto;
+  max-width: 40%;
+  overflow: hidden;
+} */
+#logo{
+  flex-basis: 20%;
+  font-size: 0;
+}
+
 #navigationLinks{
     margin-left: auto;
 }
