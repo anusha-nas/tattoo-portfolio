@@ -94,8 +94,13 @@ main h1{ /* Page header, ex:Appointment form for schedule page*/
 
 
 .card {
-    /* padding-left: 10px; */
     padding-left: 10px;
     padding-right: 50px;
     border: none;
+}  
+
+/* Edit Profile Page */
+.custom-file-upload{
+  display: inline-block;
+  padding: 6px 12px;
 }
