@@ -57,7 +57,7 @@ main h1{ /* Page header, ex:Appointment form for schedule page*/
   }
   
   .sidebar-nav {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     width: 250px;
     list-style: none;
