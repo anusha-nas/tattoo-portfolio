@@ -144,6 +144,19 @@ main h1{ /* Page header, ex:Appointment form for schedule page*/
   height: 500px;
 }
 
+/* Portfolios */
+.card-img-top {
+  height: 350px;
+  width: 240px;
+  border-radius: 10px;
+}
+
+#card-row {
+  padding-top: 4rem;
+}
+
+
+
 /* Media Queries */
 @media (max-width:767px) {
   #wrapper {
