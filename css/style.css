@@ -4,40 +4,51 @@
     font-family: 'montserrat', sans-serif;
 }
 
-/* #logo img{
-  position: absolute;
-  margin-top:5px;
-  margin-left:15px;
-  height: auto;
-  width: auto;
-  max-width: 40%;
-  overflow: hidden;
-} */
-#logo {
-  flex-basis: 20%;
-  font-size: 0;
+nav {
+  display: none;
 }
 
-#navigationLinks {
-    margin-left: auto;
-}
 
-.navbar {
-    background-color: rgba(216, 226, 220, 1);
-}
+@media (min-width:768px) {
+  
+  .fa-fa-bars {
+    display: none;
+  }
+  /* #logo img{
+    position: absolute;
+    margin-top:5px;
+    margin-left:15px;
+    height: auto;
+    width: auto;
+    max-width: 40%;
+    overflow: hidden;
+  } */
+  #logo {
+    flex-basis: 20%;
+    font-size: 0;
+  }
 
-.navbar-brand {
-    padding-left: 5rem;
-    color: black;
-    font-size: 1.75rem;
-}
+  #navigationLinks {
+      margin-left: auto;
+  }
 
-.nav-item {
-    padding: 1rem;
-}
+  .navbar {
+      background-color: rgba(216, 226, 220, 1);
+  }
 
-.nav-link {
-    color: black;
+  .navbar-brand {
+      padding-left: 5rem;
+      color: black;
+      font-size: 1.75rem;
+  }
+
+  .nav-item {
+      padding: 1rem;
+  }
+
+  .nav-link {
+      color: black;
+  }
 }
 
 main {
