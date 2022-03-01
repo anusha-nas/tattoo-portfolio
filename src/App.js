@@ -9,8 +9,12 @@ import Schedule from "./Schedule";
 import Account from "./Account";
 import Footer from "./Footer";
 
+<<<<<<< HEAD
 import CARDS from '../data/Cards.json';
 import PORT from '../data/Ports.json';
+=======
+import CARDS from './Cards.json';
+>>>>>>> 2c8960316d4da601867f1ba1324883275bbc81be
 
 const ACCOUNT_INFO = [
   { id: "formName", title: "Full name", type: "name", placeholder: "Megan Fox" },
