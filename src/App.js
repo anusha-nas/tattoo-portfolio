@@ -9,7 +9,7 @@ import Schedule from "./Schedule";
 import Account from "./Account";
 import Footer from "./Footer";
 
-import CARDS from '../data/Cards.json';
+import CARDS from './Cards.json';
 
 const ACCOUNT_INFO = [  
   { id: "formName",title: "Full name", type:"name", placeholder:"Megan Fox"},
