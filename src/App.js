@@ -7,6 +7,9 @@ import Map from "./Map";
 import Portfolios from "./Portfolios";
 import Schedule from "./Schedule";
 import Account from "./Account";
+import Footer from "./Footer";
+
+import CARDS from '../data/Cards.json';
 
 const ACCOUNT_INFO = [  
   { id: "formName",title: "Full name", type:"name", placeholder:"Megan Fox"},
@@ -19,12 +22,13 @@ export default function App() {
     <div className="container-fluid">
       <Header />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage cards={ CARDS } />} />
         <Route path="Map" element={<Map />} />
         <Route path="Portfolios" element={<Portfolios />} />
         <Route path="Schedule" element={<Schedule />} />
         <Route path="Account" element={<Account account={ACCOUNT_INFO}/>} />
       </Routes>
+      <Footer />
     </div>
   );
 }
