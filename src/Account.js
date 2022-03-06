@@ -12,7 +12,6 @@ export default function Account(props) {
         return formElem;
       });*/}
 
-
     return (
         <div>
             <h1>Account</h1>

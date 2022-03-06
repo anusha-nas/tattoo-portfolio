@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function Sidebar() {
     return (
-
         <div>
             <div className="border-end bg-white" id="sidebar-wrapper">
                 <div className="card">

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function LandingPage(props) {
 
-    const {cardTitle, cardImg, cardAlt, cardIntro, cardContent} = props.cards;
+    const { cardTitle, cardImg, cardAlt, cardIntro, cardContent } = props.cards;
 
     return (
         <div className="container-fluid">
@@ -17,10 +17,10 @@ export default function LandingPage(props) {
                 <div className="col">
                     <div className="card">
                         <div className="card-body">
-                            <p className="card-title">{ cardTitle }</p>
-                            <img src={ cardImg } alt={ cardAlt } className="shop-img"/>
-                            <p className="card-subtitle mb-2 text-muted">{ cardIntro }</p>
-                            <p className="card-text">{ cardContent }</p>
+                            <p className="card-title">{cardTitle}</p>
+                            <img src={cardImg} alt={cardAlt} className="shop-img" />
+                            <p className="card-subtitle mb-2 text-muted">{cardIntro}</p>
+                            <p className="card-text">{cardContent}</p>
                         </div>
                     </div>
                 </div>
