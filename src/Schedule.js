@@ -5,113 +5,153 @@ import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Card from 'react-bootstrap/Card'
 
-export default function Schedule() {
-    //state variable to keep track of current inputted value 
-    const [formData, setFormData] = useState({
-        date: null, //what are default values for these form inputs? 
-        time: null,
-        appointment: null,
-        name: "",
-        email: "",
-        tattoo: "",
-        budget: "",
-    });
+import AppointmentList from "./AppointmentList";
+
+export default function Schedule(props) {
+
+
+    //state function for each field of form
+    const [appt, setAppt] = useState(null);
+    const [consult, setConsult] = useState(null);
+    const [date, setDate] = useState(null);
+    const [time, setTime] = useState(null);
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [tattoo, setTattoo] = useState("");
+    const [budget, setBudget] = useState("");
+
 
     //create a callback function that updates the current value in the form to the
     //state variable above, add this as a callback to an onChange event to <input>/<form control>
-    const handleChange = (event) => {
-        let newValue = event.target.value; //what user has typed into form
-        setFormData(newValue);
+    const handleAppt = (event) => {
+        //console.log(event.target.value);
+        setAppt(event.target.value);
+    }
+    const handleConsult = (event) => {
+        setConsult(event.target.value);
+    }
+    const handleDate = (event) => {
+        setDate(event.target.value)
+    }
+    const handleTime = (event) => {
+        setTime(event.target.value);
+    }
+    const handleName = (event) => {
+        setName(event.target.value);
+    }
+    const handleEmail = (event) => {
+        setEmail(event.target.value);
+    }
+    const handleTattoo = (event) => {
+        setTattoo(event.target.value)
+    }
+    const handleBudget = (event) => {
+        setBudget(event.target.value);
     }
 
-    //save user inputs to form, render data as appointment card, empty form
+    //save user submission
     const handleSubmit = (event) => {
-        setFormData("");
+        event.preventDefault();
+
+        //TODO: addApptCallback expects single appointment object as param, 
+        props.addApptCallback(); 
+
+        //reset field to starting state(empty form)
+        setAppt(null);
+        setConsult(null);
+        setDate(null);
+        setTime(null);
+        setName("");
+        setEmail("");
+        setTattoo("");
+        setBudget("");
     }
 
-    //create appointment card for user inputted form data
-    function createAppointmentCard() {
-        return (
-            <Card>
-                <Card.Title>{formData.date}</Card.Title>
-                <Card.Text>{formData.time}</Card.Text>
-                <Card.Text>{formData.appointment}</Card.Text>
-                <Card.Text>{formData.name}</Card.Text>
-                <Card.Text>{formData.email}</Card.Text>
-                <Card.Text>{formData.tattoo}</Card.Text>
-                <Card.Text>{formData.budget}</Card.Text>
-            </Card>
-        )
-    }
 
     return (
-        <div>
-            <h1> New Appointment </h1>
-            <container>
-                <Form onSubmit={handleSubmit}>
-                    {/* to do: create form and formgroup functions, create array for inputs, map to form group objects*/}
-                    <Form.Group controlId="duedate">
-                        <Form.Control type="date" name="date" placeholder="Date" />
-                    </Form.Group>
-                    <Form.Group as={Col} controlId="formGridState">
-                        <Form.Label>Time</Form.Label>
-                        <Form.Select defaultValue="Choose time">
-                            <option>9:00 am</option>
-                            <option>12:00 pm</option>
-                            <option>3:00 pm</option>
-                            <option>6:00 pm</option>
-                        </Form.Select>
-                    </Form.Group>
-                    <fieldset>
-                        <Form.Group as={Row} className="mb-3">
-                            <Form.Label>Appointment type?</Form.Label>
-                            <Col sm={10}>
-                                <Form.Check
-                                    type="radio"
-                                    label="Tattoo Appointment"
-                                    name="formHorizontalRadios"
-                                    id="formHorizontalRadios1"
-                                />
-                                <Form.Check
-                                    type="radio"
-                                    label="Consultation"
-                                    name="formHorizontalRadios"
-                                    id="formHorizontalRadios2"
-                                />
-                            </Col>
-                        </Form.Group>
-                    </fieldset>
-                    <Form.Group className="mb-3" controlId="formName">
-                        <Form.Label>Full Name</Form.Label>
-                        <Form.Control type="name" placeholder="Megan Fox" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="megan-tattoos@uw.edu" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                            <Form.Label>Tattoo</Form.Label>
-                            <Form.Control as="textarea" rows={3} placeholder="Describe the tattoo you would like to get. Is it a custom design or from the
-                                            artist's portfolio? Placement? Size?"/>
-                        </Form.Group>
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                            <Form.Label>Budget</Form.Label>
-                            <Form.Control as="textarea" rows={3} placeholder="Provide your maximum budget for the tattoo. Note the artist's minimum fee. Artist
-                                            will contact you with more information on pricing based on your response."/>
-                        </Form.Group>
-                    </Form.Group>
-                    <Button variant="primary" type="submit">
-                        Update Portfolio
-                    </Button>
-                </Form>
-            </container>
-            <div>
+        <div className="col-md-6 col-sm-6 col-xs-12">
+            <form method="post">
+                <div className="form-group ">
+                    <label className="control-label ">
+                        Appointment type?
+                    </label>
+                    <div className="">
+                        <div className="radio">
+                            <label className="radio">
+                                <input name="radio" type="radio" value="Consultation" onChange={handleConsult} />
+                                Consultation
+                            </label>
+                        </div>
+                        <div className="radio">
+                            <label className="radio">
+                                <input name="radio" type="radio" value="Tattoo Appointment" onChange={handleAppt} />
+                                Tattoo Appointment
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div className="form-group ">
+                    <label className="control-label " htmlFor="date">
+                        Date
+                    </label>
+                    <input className="form-control" id="date" name="date" placeholder="MM/DD/YYYY"
+                        type="text" onChange={handleDate} />
+                </div>
+                <div className="form-group ">
+                    <label className="control-label " htmlFor="select">
+                        Time
+                    </label>
+                    <select className="select form-control" id="select" name="select" onChange={handleTime}>
+                        <option value="9:00 am">
+                            9:00 am
+                        </option>
+                        <option value="12:00 pm">
+                            12:00 pm
+                        </option>
+                        <option value="3:00 pm">
+                            3:00 pm
+                        </option>
+                        <option value="6:00 pm">
+                            6:00 pm
+                        </option>
+                    </select>
+                </div>
+                <div className="form-group ">
+                    <label className="control-label " htmlFor="name">
+                        Full Name
+                    </label>
+                    <input className="form-control" id="name" name="name" type="text" placeholder="Megan Fox" onChange={handleName} />
+                </div>
+                <div className="form-group">
+                    <label className="control-label requiredField" htmlFor="email">
+                        Email
+                    </label>
+                    <input className="form-control" id="email" name="email" type="text" placeholder="megan-tattoos@uw.edu" onChange={handleEmail} />
+                </div>
+                <div className="form-group">
+                    <label className="control-label requiredField" htmlFor="tattoo">
+                        Tattoo
+                    </label>
+                    <input className="form-control" id="tattoo" name="tattoo" type="text" onChange={handleTattoo} />
+                    <span className="help-block" id="hint_subject1">
+                        Describe the tattoo you would like to get. Is it a custom design or from the
+                        artist's portfolio? Placement? Size?
+                    </span>
+                </div>
+                <div className="form-group">
+                    <label className="control-label requiredField" htmlFor="budget">
+                        Budget
+                    </label>
+                    <input className="form-control" id="budget" name="budget" type="text" onChange={handleBudget} />
+                    <span className="help-block" id="hint_subject1">
+                        Provide your maximum budget for the tattoo. Note the artist's minimum fee. Artist
+                        will contact you with more information on pricing based on your response.
+                    </span>
+                </div>
+                <button className="btn ">Submit</button>
+            </form>
                 <h1> Appointments</h1>
-                <createAppointmentCard />
-            </div>
-        </div>
-    );
+                {/* <AppointmentList appointments={props.appointments}/> */}
+        </div>);
+
 }

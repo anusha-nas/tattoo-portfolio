@@ -1,11 +1,11 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
-import { Container } from 'react-boostrap';
-import { Card } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
+//import { Routes, Route } from 'react-router-dom';
+//import { LinkContainer } from 'react-router-bootstrap';
+import  Container  from 'react-bootstrap/Container';
+import  Card  from 'react-bootstrap/Card';
+import  Row  from 'react-bootstrap/Row';
+import  Col  from 'react-bootstrap/Col';
+import  Button from 'react-bootstrap/Button';
 
 export default function Favorites(props) {
     return (

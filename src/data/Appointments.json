@@ -1,0 +1,22 @@
+[
+    {
+        "appt": null,
+        "consult": "Consultation",
+        "date": "08/19/2021",
+        "time": "9:00 am",
+        "name": "Robert Pattinson",
+        "email": "rob@gmail.com",
+        "tattoo": "batman symbol",
+        "budget": "$1000"
+    },
+    {
+        "appt": "Tattoo Appointment",
+        "consult": null,
+        "date": "08/20/2021",
+        "time": "12:00 pm",
+        "name": "Zoe Kravitz",
+        "email": "zoe@gmail.com",
+        "tattoo": "Robert Pattinson",
+        "budget": "$500"
+    }
+]

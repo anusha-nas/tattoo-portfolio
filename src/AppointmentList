@@ -1,0 +1,36 @@
+import React from 'react';
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Card from 'react-bootstrap/Card'
+
+//create appointment card for user inputted form data
+function Appointment() {
+    return (
+        <Row>
+            <Card>
+                <Card.Title>{apptObj.date}</Card.Title>
+                <Card.Text>{apptObj.time}</Card.Text>
+                <Card.Text>{apptObj.name}</Card.Text>
+                <Card.Text>{apptObj.email}</Card.Text>
+                <Card.Text>{apptObj.tattoo}</Card.Text>
+                <Card.Text>{apptObj.budget}</Card.Text>
+            </Card>
+        </Row>
+    )
+}
+
+
+// takes an array of appointments as prop
+export default function AppointmentList(props) {
+    // define a map() function that creates a list of <Appointment /> elements
+    // save that in a variable then render the list using an inline expression
+    let appointments = props.tasks.map((appointment) => {
+        return <Appointment key={appointment.length} date={appointment.date} time={appointment.time} //need unique key
+         name={appointment.name} email={appointment.email} tattoo={appointment.tattoo} budget={appointment.budget} /> 
+    })
+    return (
+        <Col >
+            {appointments}
+        </Col>
+    )
+}

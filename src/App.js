@@ -1,18 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from "./Header";
 import LandingPage from "./LandingPage";
 import Map from "./Map";
 import Portfolios from "./Portfolios";
+import Favorites from "./Favorites";
 import Schedule from "./Schedule";
 import Account from "./Account";
 import Footer from "./Footer";
-import EditAccountInfo from "./EditAccountInfo";
-import EditProfile from "./EditProfile";
+// import EditAccountInfo from "./EditAccountInfo";
+// import EditProfile from "./EditProfile";
 
 import CARDS from './Cards.json';
 
-export default function App() {
+export default function App(props) {
+
+  //currents set of appointments in appointment list 
+  const [appointments, setAppointments] = useState(props.appointments);
+
+  //append a new appointment to the current appointment list 
+  const addAppt= (apptObject) => {
+    const newAppt = {
+      id: appointments.length + 1,
+      appt: apptObject.appt,
+      consult: apptObject.consult,
+      date: apptObject.date,
+      time: apptObject.time,
+      name: apptObject.name,
+      email: apptObject.email,
+      tattoo: apptObject.tattoo,
+      budget: apptObject.budget 
+    }
+
+    setAppointments([...appointments, newAppt]);
+  }
+
   return (
     <div className="container-fluid">
       <Header />
@@ -20,7 +42,8 @@ export default function App() {
         <Route path="/" element={<LandingPage cards={CARDS} />} />
         <Route path="Map" element={<Map />} />
         <Route path="Portfolios" element={<Portfolios />} />
-        <Route path="Schedule" element={<Schedule />} />
+        <Route path="Favorites" element={<Favorites />} />
+        <Route path="Schedule" element={<Schedule appointments={props.appointments} addApptCallback={addAppt}/>} />
         <Route path="Account" element={<Account />}>
           {/* <Route path=":EditAccountInfo" element={<EditAccountInfo />} />    
           <Route path=":EditProfile" element={<EditProfile />} />    */}

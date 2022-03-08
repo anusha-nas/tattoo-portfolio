@@ -23,8 +23,8 @@ export default function Account(props) {
                                         <Card.Text>Full Name: "Megan Fox</Card.Text>
                                         <Card.Text>Email address: megan-tattoos@uw.edu</Card.Text>
                                         <Card.Text>Location: Seattle, WA</Card.Text>
-                                        <Link to="/EditAccountInfo" className="btn btn-primary">Edit Account Info</Link>
-                                        <Link to="/EditProfile" className="btn btn-primary">Edit Portfolio</Link>
+                                        <Link to="EditAccountInfo" className="btn btn-primary">Edit Account Info</Link>
+                                        <Link to="EditProfile" className="btn btn-primary">Edit Portfolio</Link>
                                     </Card.Body>
                                 </Card>  
                             </div>
