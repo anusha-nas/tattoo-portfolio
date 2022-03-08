@@ -7,14 +7,10 @@ import Portfolios from "./Portfolios";
 import Schedule from "./Schedule";
 import Account from "./Account";
 import Footer from "./Footer";
+import EditAccountInfo from "./EditAccountInfo";
+import EditProfile from "./EditProfile";
 
 import CARDS from './Cards.json';
-
-const ACCOUNT_INFO = [
-  { id: "formName", title: "Full name", type: "name", placeholder: "Megan Fox" },
-  { id: "formEmail", title: "Email address", type: "email", placeholder: "megan-tattoos@uw.edu" },
-  { id: "formLocation", title: "Location", type: "location", placeholder: "Seattle, WA" },
-];
 
 export default function App() {
   return (
@@ -25,7 +21,10 @@ export default function App() {
         <Route path="Map" element={<Map />} />
         <Route path="Portfolios" element={<Portfolios />} />
         <Route path="Schedule" element={<Schedule />} />
-        <Route path="Account" element={<Account account={ACCOUNT_INFO} />} />
+        <Route path="Account" element={<Account />}>
+          {/* <Route path=":EditAccountInfo" element={<EditAccountInfo />} />    
+          <Route path=":EditProfile" element={<EditProfile />} />    */}
+        </Route>
       </Routes>
       <Footer />
     </div>

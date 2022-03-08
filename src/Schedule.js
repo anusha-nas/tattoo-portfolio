@@ -1,15 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
+import Card from 'react-bootstrap/Card'
 
 export default function Schedule() {
+    //state variable to keep track of current inputted value 
+    const [formData, setFormData] = useState({
+        date: null, //what are default values for these form inputs? 
+        time: null,
+        appointment: null,
+        name: "",
+        email: "",
+        tattoo: "",
+        budget: "",
+    });
+
+    //create a callback function that updates the current value in the form to the
+    //state variable above, add this as a callback to an onChange event to <input>/<form control>
+    const handleChange = (event) => {
+        let newValue = event.target.value; //what user has typed into form
+        setFormData(newValue);
+    }
+
+    //save user inputs to form, render data as appointment card, empty form
+    const handleSubmit = (event) => {
+        setFormData("");
+    }
+
+    //create appointment card for user inputted form data
+    function createAppointmentCard() {
+        return (
+            <Card>
+                <Card.Title>{formData.date}</Card.Title>
+                <Card.Text>{formData.time}</Card.Text>
+                <Card.Text>{formData.appointment}</Card.Text>
+                <Card.Text>{formData.name}</Card.Text>
+                <Card.Text>{formData.email}</Card.Text>
+                <Card.Text>{formData.tattoo}</Card.Text>
+                <Card.Text>{formData.budget}</Card.Text>
+            </Card>
+        )
+    }
+
     return (
         <div>
-            <h1> Appointment Form</h1>
+            <h1> New Appointment </h1>
             <container>
-                <Form>
+                <Form onSubmit={handleSubmit}>
                     {/* to do: create form and formgroup functions, create array for inputs, map to form group objects*/}
                     <Form.Group controlId="duedate">
                         <Form.Control type="date" name="date" placeholder="Date" />
@@ -18,7 +57,7 @@ export default function Schedule() {
                         <Form.Label>Time</Form.Label>
                         <Form.Select defaultValue="Choose time">
                             <option>9:00 am</option>
-                            <option>.12:00 pm</option>
+                            <option>12:00 pm</option>
                             <option>3:00 pm</option>
                             <option>6:00 pm</option>
                         </Form.Select>
@@ -59,23 +98,9 @@ export default function Schedule() {
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                            <Form.Label>Tattoo</Form.Label>
-                            <Form.Control as="textarea" rows={3} placeholder="Describe the tattoo you would like to get. Is it a custom design or from the
-                                            artist's portfolio? Placement? Size?"/>
-                        </Form.Group>
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                             <Form.Label>Budget</Form.Label>
                             <Form.Control as="textarea" rows={3} placeholder="Provide your maximum budget for the tattoo. Note the artist's minimum fee. Artist
                                             will contact you with more information on pricing based on your response."/>
-                        </Form.Group>
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                            <Form.Label>Anything else?</Form.Label>
-                            <Form.Control as="textarea" rows={3} placeholder="Anything else you would like your artist to know or have questions? Leave them a
-                                            message here."/>
                         </Form.Group>
                     </Form.Group>
                     <Button variant="primary" type="submit">
@@ -83,6 +108,10 @@ export default function Schedule() {
                     </Button>
                 </Form>
             </container>
+            <div>
+                <h1> Appointments</h1>
+                <createAppointmentCard />
+            </div>
         </div>
     );
 }

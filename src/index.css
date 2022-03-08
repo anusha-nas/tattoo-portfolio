@@ -10,44 +10,9 @@ nav {
 
 
 @media (min-width:768px) {
-  
-  .fa-fa-bars {
-    display: none;
-  }
-  /* #logo img{
-    position: absolute;
-    margin-top:5px;
-    margin-left:15px;
-    height: auto;
-    width: auto;
-    max-width: 40%;
-    overflow: hidden;
-  } */
-  #logo {
-    flex-basis: 20%;
-    font-size: 0;
-  }
-
-  #navigationLinks {
-      margin-left: auto;
-  }
 
   .color-nav {
       background-color: rgba(216, 226, 220, 1);
-  }
-
-  .navbar-brand {
-      padding-left: 5rem;
-      color: black;
-      font-size: 1.75rem;
-  }
-
-  .nav-item {
-      padding: 1rem;
-  }
-
-  .nav-link {
-      color: black;
   }
 }
 
@@ -59,7 +24,8 @@ main {
   background-color: rgba(216, 226, 220, 1);
   color: black;
   border: none;
-  pointer-events: none; 
+  margin-left: 1rem;
+  /* pointer-events: none;  */
 }
 
 main h1{ /* Page header, ex:Appointment form for schedule page*/
@@ -67,51 +33,26 @@ main h1{ /* Page header, ex:Appointment form for schedule page*/
 }
 
 /* Account Page */
-#wrapper {
-  padding-right: 250px;
-  transition: all 0.4s ease 0s;
-}
-  
-#sidebar-wrapper {
-  margin-right: -250px;
-  right: 250px;
-  width: 250px;
-  background: #CCC;
-  position: fixed;
-  height: 100%;
-  overflow-y: auto;
-  z-index: 1000;
-  transition: all 0.4s ease 0s;
-}
-  
-#page-content-wrapper {
-  width: 100%;
-}
-  
-.sidebar-nav {
-  /* position: absolute; */
-  top: 0;
-  width: 250px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}  
 
-.form-group {
-  padding: 1rem;
-  padding-bottom: 2rem;
+.color-account {
+  box-sizing: border-box;
+  background-color: rgb(178, 179, 178);
 }
 
 .card {
   padding-left: 10px;
   padding-right: 50px;
-  border: none;
 }  
 
-/* Edit Profile Page */
+/* Edit Profile/Account Pages */
 .custom-file-upload {
   display: inline-block;
   padding: 6px 12px;
+}
+
+.form-group {
+  padding: 1rem;
+  padding-bottom: 2rem;
 }
 
 /* Home Page */

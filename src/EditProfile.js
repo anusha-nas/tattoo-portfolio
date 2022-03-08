@@ -1,8 +1,9 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
-export default function Map() {
+export default function EditProfile() {
     return (
         <div>
             <div id="page-content-wrapper">
@@ -11,7 +12,6 @@ export default function Map() {
                     <div className="tab-pane active" id="profile">
                         <Container>
                             <Form>
-                                {/* to do: create form and formgroup functions, create array for inputs, map to form group objects*/}
                                 <Form.Group className="mb-3" controlId="formName">
                                     <Form.Label>Artist Name</Form.Label>
                                     <Form.Control type="name" placeholder="Megan Fox" />
