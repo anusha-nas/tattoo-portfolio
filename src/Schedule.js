@@ -6,10 +6,10 @@ export default function Schedule(props) {
 
 
     //state function for each field of form
-    const [appt, setAppt] = useState(null);
-    const [consult, setConsult] = useState(null);
-    const [date, setDate] = useState(null);
-    const [time, setTime] = useState(null);
+    const [appt, setAppt] = useState(false);
+    const [consult, setConsult] = useState(false);
+    const [date, setDate] = useState("");
+    const [time, setTime] = useState("");
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [tattoo, setTattoo] = useState("");
@@ -19,11 +19,10 @@ export default function Schedule(props) {
     //create a callback function that updates the current value in the form to the
     //state variable above, add this as a callback to an onChange event to <input>/<form control>
     const handleAppt = (event) => {
-        //console.log(event.target.value);
-        setAppt(event.target.value);
+        setAppt(event.target.checked);
     }
     const handleConsult = (event) => {
-        setConsult(event.target.value);
+        setConsult(event.target.checked);
     }
     const handleDate = (event) => {
         setDate(event.target.value)
@@ -47,15 +46,18 @@ export default function Schedule(props) {
     //save user submission
     const handleSubmit = (event) => {
         event.preventDefault();
+        console.log("submitted");
+        console.log(appt, consult, date, time, name, email, tattoo, budget);
 
         //addAppt callback function is executed with the state variables holding all the user inputs
         props.addApptCallback(appt, consult, date, time, name, email, tattoo, budget);
-
+        //console.log( props.addApptCallback(appt, consult, date, time, name, email, tattoo, budget));
+        
         //reset field to starting state(empty form)
-        setAppt(null);
-        setConsult(null);
-        setDate(null);
-        setTime(null);
+        setAppt(false);
+        setConsult(false);
+        setDate("");
+        setTime("");
         setName("");
         setEmail("");
         setTattoo("");
@@ -74,13 +76,13 @@ export default function Schedule(props) {
                     <div className="form-group">
                         <div className="radio">
                             <label className="radio">
-                                <input name="radio" type="radio" value="Consultation" onChange={handleConsult} />
+                                <input name="radio" type="radio" value="Consultation" checked={consult} onChange={handleConsult} />
                                 Consultation
                             </label>
                         </div>
                         <div className="radio">
                             <label className="radio">
-                                <input name="radio" type="radio" value="Tattoo Appointment" onChange={handleAppt} />
+                                <input name="radio" type="radio" value="Tattoo Appointment" checked={appt} onChange={handleAppt} />
                                 Tattoo Appointment
                             </label>
                         </div>
@@ -90,45 +92,45 @@ export default function Schedule(props) {
                     <label className="control-label " htmlFor="date">
                         Date
                     </label>
-                    <input className="form-control" id="date" name="date" placeholder="MM/DD/YYYY"
+                    <input className="form-control" id="date" name="date" placeholder="MM/DD/YYYY" value={date}
                         type="text" onChange={handleDate} />
                 </div>
-                <div className="form-group ">
+                <div className="form-group">
                     <label className="control-label " htmlFor="select">
                         Time
                     </label>
-                    <select className="select form-control" id="select" name="select" onChange={handleTime}>
-                        <option value="9:00 am">
+                    <select className="form-select" id="select" name="select" value={time} onChange={handleTime}>
+                        <option> 
                             9:00 am
-                        </option>
-                        <option value="12:00 pm">
+                        </option> 
+                        <option>
                             12:00 pm
                         </option>
-                        <option value="3:00 pm">
+                        <option>
                             3:00 pm
                         </option>
-                        <option value="6:00 pm">
+                        <option>
                             6:00 pm
                         </option>
                     </select>
                 </div>
-                <div className="form-group ">
+                <div className="form-group">
                     <label className="control-label " htmlFor="name">
                         Full Name
                     </label>
-                    <input className="form-control" id="name" name="name" type="text" placeholder="Megan Fox" onChange={handleName} />
+                    <input className="form-control" id="name" name="name" type="text" placeholder="Megan Fox" value={name} onChange={handleName} />
                 </div>
                 <div className="form-group">
                     <label className="control-label requiredField" htmlFor="email">
                         Email
                     </label>
-                    <input className="form-control" id="email" name="email" type="text" placeholder="megan-tattoos@uw.edu" onChange={handleEmail} />
+                    <input className="form-control" id="email" name="email" type="text" placeholder="megan-tattoos@uw.edu" value={email} onChange={handleEmail} />
                 </div>
                 <div className="form-group">
                     <label className="control-label requiredField" htmlFor="tattoo">
                         Tattoo
                     </label>
-                    <input className="form-control" id="tattoo" name="tattoo" type="text" onChange={handleTattoo} />
+                    <input className="form-control" id="tattoo" name="tattoo" type="text" value={tattoo} onChange={handleTattoo} />
                     <span className="help-block" id="hint_subject1">
                         Describe the tattoo you would like to get. Is it a custom design or from the
                         artist's portfolio? Placement? Size?
@@ -138,7 +140,7 @@ export default function Schedule(props) {
                     <label className="control-label requiredField" htmlFor="budget">
                         Budget
                     </label>
-                    <input className="form-control" id="budget" name="budget" type="text" onChange={handleBudget} />
+                    <input className="form-control" id="budget" name="budget" type="text" value={budget} onChange={handleBudget} />
                     <span className="help-block" id="hint_subject1">
                         Provide your maximum budget for the tattoo. Note the artist's minimum fee. Artist
                         will contact you with more information on pricing based on your response.

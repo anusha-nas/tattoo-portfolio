@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "appt": null,
+        "appt": false,
         "consult": "Consultation",
         "date": "08/19/2021",
         "time": "9:00 am",
@@ -13,7 +13,7 @@
     {
         "id": 2,
         "appt": "Tattoo Appointment",
-        "consult": null,
+        "consult": false,
         "date": "08/20/2021",
         "time": "12:00 pm",
         "name": "Zoe Kravitz",
