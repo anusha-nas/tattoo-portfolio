@@ -9,7 +9,7 @@ import Nav from 'react-bootstrap/Nav';
 export default function Header() {
   return (
     <Navbar className="color-nav" variant="light">
-      <Container>
+      <Container className="notinMobile">
         <LinkContainer to="/">
           <Navbar.Brand>
             <img

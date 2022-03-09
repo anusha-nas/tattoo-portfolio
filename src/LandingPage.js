@@ -9,7 +9,7 @@ export default function LandingPage(props) {
 
             <div className="row">
                 <div className="col">
-                    <span class="line-homepg">Popular Artists</span>
+                    <span className="line-homepg">Popular Artists</span>
                 </div>
             </div>
 
@@ -40,31 +40,6 @@ export default function LandingPage(props) {
                         <li>Step 4: Schedule a consultation</li>
                         <li>Step 5: Get the tattoo and aftercare</li>
                     </ul>
-                </div>
-            </div>
-
-            <div className="row">
-                <div className="col">
-                    <span className="line-homepg">Log in</span>
-                </div>
-            </div>
-            <div className="row content-row">
-                <div className="col">
-                    <form>
-                        <div className="mb-3">
-                            <label for="inputEmail" className="form-label">Email address</label>
-                            <input type="email" className="form-control" id="inputEmail" />
-                        </div>
-                        <div className="mb-3">
-                            <label for="inputPassword" className="form-label">Password</label>
-                            <input type="password" className="form-control" id="inputPassword" />
-                        </div>
-                        <div className="mb-3 form-check">
-                            <input type="checkbox" className="form-check-input" id="inputCheck" />
-                            <label className="form-check-label" for="inputCheck">I'm an artist!</label>
-                        </div>
-                        <button type="submit" className="btn btn-primary">Submit</button>
-                    </form>
                 </div>
             </div>
         </div>

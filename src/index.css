@@ -4,11 +4,24 @@
     font-family: 'montserrat', sans-serif;
 }
 
+/* Default for mobile */
 nav {
   display: none;
 }
 
+#map {
+  height: 300px;
+  width: 400px;
+}
 
+.btn {
+  background-color: rgba(216, 226, 220, 1);
+  color: black;
+  border: none;
+  margin-left: 1rem;
+}
+
+/* Styling for larger screens */
 @media (min-width:768px) {
 
   .color-nav {
@@ -20,15 +33,7 @@ main {
   padding: 4rem;
 }
 
-.btn {
-  background-color: rgba(216, 226, 220, 1);
-  color: black;
-  border: none;
-  margin-left: 1rem;
-  /* pointer-events: none;  */
-}
-
-main h1{ /* Page header, ex:Appointment form for schedule page*/
+h1{ /* Page header, ex:Appointment form for schedule page*/
   padding: 2rem;
 }
 
@@ -107,31 +112,8 @@ main h1{ /* Page header, ex:Appointment form for schedule page*/
   padding-top: 4rem;
 }
 
-
-
-/* Media Queries */
-@media (max-width:767px) {
-  #wrapper {
-    padding-right: 0;
-  }
-
-  #sidebar-wrapper {
-    right: 0;
-  }
-
-  #wrapper.active {
-    position: relative;
-    right: 250px;
-  }
-
-  #wrapper.active #sidebar-wrapper {
-    right: 250px;
-    width: 250px;
-    transition: all 0.4s ease 0s;
-  }
-
-  #map {
-    height: 300px;
-    width: 400px;
+@media (min-width: 992px){
+  h1{
+      font-size:3rem;
   }
 }

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
@@ -12,9 +10,9 @@ export default function Portfolios(props) {
         <div>
             <h1>Portfolios</h1>
             <div className="container fluid">
-                <div className="col">
+                {/* <div className="col">
                     <span id="reservations">Survey Tattoo Artists</span>
-                </div>
+                </div> */}
             </div>
             <Container fluid>
                 <Row>
@@ -26,7 +24,7 @@ export default function Portfolios(props) {
                                     <Card.Title>Moonlight Ink</Card.Title>
                                     <Card.Text>
                                         Appointment Only. Please contact schedule with a specific artist directly.
-                                </Card.Text>
+                                    </Card.Text>
                                     <Button variant="primary">More Info</Button>
                                 </Card.Body>
                             </Card>
@@ -41,7 +39,7 @@ export default function Portfolios(props) {
                                     <Card.Text>
                                         Luna Webber has over 10 years of tattoo experience, and emphasizes detail
                                         and care in her work.
-                                </Card.Text>
+                                    </Card.Text>
                                     <Button variant="primary">More Info</Button>
                                 </Card.Body>
                             </Card>
@@ -56,7 +54,7 @@ export default function Portfolios(props) {
                                     <Card.Text>
                                         Located in Capitol Hill and always focused on empowering clients through
                                         their art.
-                                </Card.Text>
+                                    </Card.Text>
                                     <Button variant="primary">More Info</Button>
                                 </Card.Body>
                             </Card>

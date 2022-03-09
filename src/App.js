@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import {Navigate} from 'react-router-dom';
 import Header from "./Header";
 import LandingPage from "./LandingPage";
 import Map from "./Map";
@@ -48,6 +49,7 @@ export default function App(props) {
           {/* <Route path=":EditAccountInfo" element={<EditAccountInfo />} />    
           <Route path=":EditProfile" element={<EditProfile />} />    */}
         </Route>
+        <Route path="*" element={<Navigate to="/"/>} />
       </Routes>
       <Footer />
     </div>

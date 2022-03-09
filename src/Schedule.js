@@ -1,9 +1,4 @@
 import React, { useState } from 'react';
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
-import Card from 'react-bootstrap/Card'
 
 import AppointmentList from "./AppointmentList";
 
@@ -54,7 +49,7 @@ export default function Schedule(props) {
         event.preventDefault();
 
         //TODO: addApptCallback expects single appointment object as param, 
-        props.addApptCallback(); 
+        props.addApptCallback();
 
         //reset field to starting state(empty form)
         setAppt(null);
@@ -70,6 +65,7 @@ export default function Schedule(props) {
 
     return (
         <div className="col-md-6 col-sm-6 col-xs-12">
+            <h1>Schedule </h1>
             <form method="post">
                 <div className="form-group ">
                     <label className="control-label ">
@@ -150,8 +146,8 @@ export default function Schedule(props) {
                 </div>
                 <button className="btn ">Submit</button>
             </form>
-                <h1> Appointments</h1>
-                {/* <AppointmentList appointments={props.appointments}/> */}
+            <h1> Appointments</h1>
+            {/* <AppointmentList appointments={props.appointments}/> */}
         </div>);
 
 }
