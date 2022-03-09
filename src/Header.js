@@ -8,8 +8,8 @@ import Nav from 'react-bootstrap/Nav';
 
 export default function Header() {
   return (
-    <Navbar className="color-nav" variant="light">
-      <Container className="notinMobile">
+    <Navbar className="color-nav navPosition" variant="light">
+      <Container className="fixPosition">
         <LinkContainer to="/">
           <Navbar.Brand>
             <img

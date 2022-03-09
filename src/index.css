@@ -5,9 +5,6 @@
 }
 
 /* Default for mobile */
-nav {
-  display: none;
-}
 
 #map {
   height: 300px;
@@ -21,13 +18,21 @@ nav {
   margin-left: 1rem;
 }
 
-/* Styling for larger screens */
-@media (min-width:768px) {
-
-  .color-nav {
-      background-color: rgba(216, 226, 220, 1);
-  }
+.color-nav {
+  background-color: rgba(216, 226, 220, 1);
 }
+
+.navPosition {
+  /* display: inline-block; */
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* .fixPosition {
+  flex-grow: 1;
+} */
 
 main {
   padding: 4rem;
