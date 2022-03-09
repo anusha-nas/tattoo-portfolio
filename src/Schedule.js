@@ -6,8 +6,7 @@ export default function Schedule(props) {
 
 
     //state function for each field of form
-    const [appt, setAppt] = useState(false);
-    const [consult, setConsult] = useState(false);
+    const [apptType, setApptType] = useState(false);
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [name, setName] = useState("");
@@ -18,11 +17,8 @@ export default function Schedule(props) {
 
     //create a callback function that updates the current value in the form to the
     //state variable above, add this as a callback to an onChange event to <input>/<form control>
-    const handleAppt = (event) => {
-        setAppt(event.target.checked);
-    }
-    const handleConsult = (event) => {
-        setConsult(event.target.checked);
+    const handleApptType = (event) => {
+        setApptType(event.target.checked);
     }
     const handleDate = (event) => {
         setDate(event.target.value)
@@ -46,16 +42,12 @@ export default function Schedule(props) {
     //save user submission
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("submitted");
-        console.log(appt, consult, date, time, name, email, tattoo, budget);
 
         //addAppt callback function is executed with the state variables holding all the user inputs
-        props.addApptCallback(appt, consult, date, time, name, email, tattoo, budget);
-        //console.log( props.addApptCallback(appt, consult, date, time, name, email, tattoo, budget));
-        
+        props.addApptCallback(apptType, date, time, name, email, tattoo, budget);
+
         //reset field to starting state(empty form)
-        setAppt(false);
-        setConsult(false);
+        setApptType(false);
         setDate("");
         setTime("");
         setName("");
@@ -76,13 +68,13 @@ export default function Schedule(props) {
                     <div className="form-group">
                         <div className="radio">
                             <label className="radio">
-                                <input name="radio" type="radio" value="Consultation" checked={consult} onChange={handleConsult} />
+                                <input name="radio" type="radio" value="Consultation" checked={apptType} onChange={handleApptType} />
                                 Consultation
                             </label>
                         </div>
                         <div className="radio">
                             <label className="radio">
-                                <input name="radio" type="radio" value="Tattoo Appointment" checked={appt} onChange={handleAppt} />
+                                <input name="radio" type="radio" value="Tattoo Appointment" />
                                 Tattoo Appointment
                             </label>
                         </div>
@@ -100,9 +92,9 @@ export default function Schedule(props) {
                         Time
                     </label>
                     <select className="form-select" id="select" name="select" value={time} onChange={handleTime}>
-                        <option> 
+                        <option>
                             9:00 am
-                        </option> 
+                        </option>
                         <option>
                             12:00 pm
                         </option>
@@ -149,7 +141,8 @@ export default function Schedule(props) {
                 <button className="btn ">Submit</button>
             </form>
             <h1> Appointments</h1>
-            <AppointmentList appointments={props.appointments}/>
-        </div>);
+            <AppointmentList appointments={props.appointments} />
+        </div>
+    );
 
 }

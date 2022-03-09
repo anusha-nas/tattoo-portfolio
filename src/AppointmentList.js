@@ -9,8 +9,8 @@ function AppointmentCard(props) {
             <div>
                 <div className="card mb-3">
                     <div className="card-body">
-                        <h3 className="card-title">{apptObj.consult} {apptObj.appt}</h3>
-                        <p className="card-text">{apptObj.date} {apptObj.time}</p>
+                        <h3 className="card-title">{apptObj.apptType} </h3>
+                        <p className="card-text">Time: {apptObj.date} {apptObj.time}</p>
                         <p className="card-text">Contact: {apptObj.name}, {apptObj.email}</p>
                         <p className="card-text">Tattoo: {apptObj.tattoo}</p>
                         <p className="card-text">Budget: {apptObj.budget} </p>
@@ -28,7 +28,7 @@ export default function AppointmentList(props) {
     let appointmentItems = props.appointments.map((appointment) => {
         return <AppointmentCard key={appointment.id} appointment={appointment} />
     });
-    
+
     return (
         <div className="col">
             {appointmentItems}
