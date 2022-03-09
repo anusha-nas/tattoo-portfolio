@@ -20,17 +20,26 @@ export default function App(props) {
   const [appointments, setAppointments] = useState(props.appointments);
 
   //append a new appointment to the current appointment list 
-  const addAppt= (apptObject) => {
+  const addAppt= (props) => {
     const newAppt = {
+      // id: appointments.length + 1,
+      // appt: apptObject.appt,
+      // consult: apptObject.consult,
+      // date: apptObject.date,
+      // time: apptObject.time,
+      // name: apptObject.name,
+      // email: apptObject.email,
+      // tattoo: apptObject.tattoo,
+      // budget: apptObject.budget 
       id: appointments.length + 1,
-      appt: apptObject.appt,
-      consult: apptObject.consult,
-      date: apptObject.date,
-      time: apptObject.time,
-      name: apptObject.name,
-      email: apptObject.email,
-      tattoo: apptObject.tattoo,
-      budget: apptObject.budget 
+      appt: props.appt,
+      consult: props.consult,
+      date: props.date,
+      time: props.time,
+      name: props.name,
+      email: props.email,
+      tattoo: props.tattoo,
+      budget: props.budget 
     }
 
     setAppointments([...appointments, newAppt]);

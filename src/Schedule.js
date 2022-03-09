@@ -48,8 +48,8 @@ export default function Schedule(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        //TODO: addApptCallback expects single appointment object as param, 
-        props.addApptCallback();
+        //addAppt callback function is executed with the state variables holding all the user inputs
+        props.addApptCallback(appt, consult, date, time, name, email, tattoo, budget);
 
         //reset field to starting state(empty form)
         setAppt(null);
@@ -66,12 +66,12 @@ export default function Schedule(props) {
     return (
         <div className="col-md-6 col-sm-6 col-xs-12">
             <h1>Schedule </h1>
-            <form method="post">
-                <div className="form-group ">
+            <form method="post" onSubmit={handleSubmit}>
+                <div className="form-group">
                     <label className="control-label ">
                         Appointment type?
                     </label>
-                    <div className="">
+                    <div className="form-group">
                         <div className="radio">
                             <label className="radio">
                                 <input name="radio" type="radio" value="Consultation" onChange={handleConsult} />
@@ -147,7 +147,7 @@ export default function Schedule(props) {
                 <button className="btn ">Submit</button>
             </form>
             <h1> Appointments</h1>
-            {/* <AppointmentList appointments={props.appointments}/> */}
+            <AppointmentList appointments={props.appointments}/>
         </div>);
 
 }
