@@ -12,8 +12,8 @@ import Footer from "./Footer";
 // import EditAccountInfo from "./EditAccountInfo";
 // import EditProfile from "./EditProfile";
 
-import CARDS from './Cards.json';
-import MAPINFO from './MapInfo.json';
+import CARDS from './data/Cards.json';
+import MAPINFO from './data/MapInfo.json';
 
 export default function App(props) {
 
@@ -47,8 +47,7 @@ export default function App(props) {
       <Header />
       <Routes>
         <Route path="/" element={<LandingPage cards={CARDS} />} />
-        {/* <Route path="Map" element={<Map popups={MAPINFO}/>} /> */}
-        <Route path="Map" element={<Map />} />
+        <Route path="Map" element={<Map popups={MAPINFO} />} />
         <Route path="Portfolios" element={<Portfolios />} />
         <Route path="Favorites" element={<Favorites />} />
         <Route path="Schedule" element={<Schedule appointments={appointments} addApptCallback={addAppt} />} />
