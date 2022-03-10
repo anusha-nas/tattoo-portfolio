@@ -58,7 +58,9 @@ export default function Schedule(props) {
 
 
     return (
-        <div className="col-md-6 col-sm-6 col-xs-12">
+        <div className="container-fluid"> 
+        <div className="row">
+        <div className="col-md-6 col-sm-6 col-xs-12" >
             <h1>Schedule </h1>
             <form method="post" onSubmit={handleSubmit}>
                 <div className="form-group">
@@ -140,8 +142,12 @@ export default function Schedule(props) {
                 </div>
                 <button className="btn ">Submit</button>
             </form>
+            </div>
+            <div className="col-md-6">
             <h1> Appointments</h1>
             <AppointmentList appointments={props.appointments} />
+            </div>
+        </div>
         </div>
     );
 
