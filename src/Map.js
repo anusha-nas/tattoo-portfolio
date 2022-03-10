@@ -15,7 +15,7 @@ function Popup(props) {
 
 }
 
-export default function Map(props) {
+export default function PopupList(props) {
 
     const popupArray = props.popups.map((aPopup) => {
         const popupElem = <Popup popup={ aPopup } key={ aPopup.location } />
@@ -24,13 +24,7 @@ export default function Map(props) {
 
     return (
         <MapContainer className="map" center={[47.6062, -122.3321]} zoom={13}>
-            <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-
             { popupArray }
-
         </MapContainer>
     )
 }
