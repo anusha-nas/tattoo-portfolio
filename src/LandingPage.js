@@ -1,8 +1,29 @@
 import React from 'react';
 
-export default function LandingPage(props) {
+function Card(props) {
+    const { cardTitle, cardImg, cardAlt, cardIntro, cardContent } = props.card;
 
-    const { cardTitle, cardImg, cardAlt, cardIntro, cardContent } = props.cards;
+    return (
+        <div className="row content-row">
+            <div className="col">
+                <div className="card">
+                    <div className="card-body">
+                        <p className="card-title">{cardTitle}</p>
+                        <img src={cardImg} alt={cardAlt} className="shop-img" />
+                        <p className="card-subtitle mb-2 text-muted">{cardIntro}</p>                         
+                        <p className="card-text">{cardContent}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default function LandingPage(props) {
+    const cardArray = props.cards.map((aCard) => {
+        const cardElem = <Card card={ aCard } key={ aCard.cardTitle } />
+        return cardElem
+    });
 
     return (
         <div className="container-fluid">
@@ -13,18 +34,7 @@ export default function LandingPage(props) {
                 </div>
             </div>
 
-            <div className="row content-row">
-                <div className="col">
-                    <div className="card">
-                        <div className="card-body">
-                            <p className="card-title">{cardTitle}</p>
-                            <img src={cardImg} alt={cardAlt} className="shop-img" />
-                            <p className="card-subtitle mb-2 text-muted">{cardIntro}</p>
-                            <p className="card-text">{cardContent}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            { cardArray }
 
             <div className="row">
                 <div className="col">
