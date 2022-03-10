@@ -104,9 +104,10 @@ h1{ /* Page header, ex:Appointment form for schedule page*/
 }
 
 /* Map */
-#map {
-  height: 500px;
+.map {
+  height: 600px;
 }
+
 
 /* Portfolios */
 .card-img-top {
@@ -122,5 +123,9 @@ h1{ /* Page header, ex:Appointment form for schedule page*/
 @media (min-width: 992px){
   h1{
       font-size:3rem;
+  }
+
+  .map {
+    height: 800px;
   }
 }

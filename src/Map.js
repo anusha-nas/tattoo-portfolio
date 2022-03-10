@@ -1,18 +1,36 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
-export default function Map() {
-    const position = [47.6076, -122.3362];
+// `props.popup` is a dictionary of the information of a single popup location
+function PopMarker(props) {
+
+    const { location, shopName, businessHours } = props.popup;
+
     return (
-        <MapContainer center={position} zoom={9}>
+        <Marker position={location}>
+            <Popup>
+                {shopName} <br /> {businessHours}
+            </Popup>
+        </Marker>
+    );
+}
+
+// `props.popups` refers to the entire MapInfo data, the information of all 3 shops for popup
+export default function Map(props) {
+
+    const popupArray = props.popups.map((aPopup) => {
+        return <PopMarker popup={ aPopup } key={ aPopup.location } />
+    });
+
+    return (
+        <MapContainer className="map" center={[47.6062, -122.3321]} zoom={13}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={position}>
-                <Popup>
-                    TT661 Tattoo <br /> 11:00 AM - 3:00 PM
-                </Popup>
-            </Marker>
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+
+            {popupArray}
+
         </MapContainer>
-    );
+    )
 }
