@@ -42,8 +42,9 @@ export default function App(props) {
   }
 
   return (
-    <div className="container-fluid">
+    <div>
       <Header />
+      <div className="container-fluid">
       <Routes>
         <Route path="/" element={<LandingPage cards={CARDS} />} />
         <Route path="Map" element={<Map />} />
@@ -57,6 +58,7 @@ export default function App(props) {
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
+    </div>
     </div>
   );
 }
