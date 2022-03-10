@@ -50,8 +50,7 @@ h1{ /* Page header, ex:Appointment form for schedule page*/
 }
 
 .card {
-  padding-left: 10px;
-  padding-right: 50px;
+  width: 240px;
 }  
 
 /* Edit Profile/Account Pages */

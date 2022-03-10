@@ -14,6 +14,7 @@ import Footer from "./Footer";
 
 import CARDS from './data/Cards.json';
 import MAPINFO from './data/MapInfo.json';
+import SAMPLEPORTFOLIO from './data/Port.json';
 
 export default function App(props) {
 
@@ -48,7 +49,7 @@ export default function App(props) {
       <Routes>
         <Route path="/" element={<LandingPage cards={CARDS} />} />
         <Route path="Map" element={<Map popups={MAPINFO} />} />
-        <Route path="Portfolios" element={<Portfolios />} />
+        <Route path="Portfolios" element={<Portfolios samplePortfolios={SAMPLEPORTFOLIO} />} />
         <Route path="Favorites" element={<Favorites />} />
         <Route path="Schedule" element={<Schedule appointments={appointments} addApptCallback={addAppt} />} />
         <Route path="Account" element={<Account />}>
