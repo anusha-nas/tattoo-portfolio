@@ -44,21 +44,23 @@ export default function App(props) {
   }
 
   return (
-    <div className="container-fluid">
+    <div>
       <Header />
-      <Routes>
-        <Route path="/" element={<LandingPage cards={CARDS} />} />
-        <Route path="Map" element={<Map popups={MAPINFO} />} />
-        <Route path="Portfolios" element={<Portfolios samplePortfolios={SAMPLEPORTFOLIO} />} />
-        <Route path="Favorites" element={<Favorites />} />
-        <Route path="Schedule" element={<Schedule appointments={appointments} addApptCallback={addAppt} />} />
-        <Route path="Account" element={<Account />}>
-          {/* <Route path=":EditAccountInfo" element={<EditAccountInfo />} />    
+      <div className="container-fluid">
+        <Routes>
+          <Route path="/" element={<LandingPage cards={CARDS} />} />
+          <Route path="Map" element={<Map popups={MAPINFO} />} />
+          <Route path="Portfolios" element={<Portfolios samplePortfolios={SAMPLEPORTFOLIO} />} />
+          <Route path="Favorites" element={<Favorites />} />
+          <Route path="Schedule" element={<Schedule appointments={appointments} addApptCallback={addAppt} />} />
+          <Route path="Account" element={<Account />}>
+            {/* <Route path=":EditAccountInfo" element={<EditAccountInfo />} />    
           <Route path=":EditProfile" element={<EditProfile />} />    */}
-        </Route>
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
-      <Footer />
+          </Route>
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -8,8 +8,8 @@ import Nav from 'react-bootstrap/Nav';
 
 export default function Header() {
   return (
-    <Navbar className="color-nav navPosition" variant="light">
-      <Container className="fixPosition">
+    <Navbar className="color-nav" >
+      <Container className="fixPosition navPosition">
         <LinkContainer to="/">
           <Navbar.Brand>
             <img
@@ -19,7 +19,7 @@ export default function Header() {
               height="30"
               className="d-inline-block align-top"
             />{' '} INKD
-            </Navbar.Brand></LinkContainer>
+          </Navbar.Brand></LinkContainer>
         <Nav className=".ms-auto">
           <LinkContainer to="/Map"><Nav.Link>Map</Nav.Link></LinkContainer>
           <LinkContainer to="/Portfolios"><Nav.Link>Portfolios</Nav.Link></LinkContainer>
