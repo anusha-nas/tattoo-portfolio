@@ -46,7 +46,7 @@ export default function LandingPage(props) {
                     <ul>
                         <li>Step 1: Choose designs</li>
                         <li>Step 2: Think about placement</li>
-                        <li><a className="to-portfolios" href="Portfolios.html">Step 3: Search artists and shops</a></li>
+                        <li>Step 3: Search artists and shops</li>
                         <li>Step 4: Schedule a consultation</li>
                         <li>Step 5: Get the tattoo and aftercare</li>
                     </ul>
