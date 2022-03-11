@@ -95,6 +95,9 @@ export default function Schedule(props) {
                     </label>
                             <select className="form-select" id="select" name="select" value={time} onChange={handleTime}>
                                 <option>
+                                    Pick a time
+                        </option>
+                                <option>
                                     9:00 am
                         </option>
                                 <option>

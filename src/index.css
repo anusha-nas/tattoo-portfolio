@@ -11,11 +11,32 @@
   width: 400px;
 }
 
+.logoSize {
+  width: 100px;
+  height: 100px;
+}
+
+.logoFont{
+  font-size: 2em;
+}
+
+@media (min-width: 768px){
+  .logoSize{
+    width: 30px;
+    height: 30px;
+  }
+
+  .logoFont {
+    font-size: 1em;
+  }
+}
+
 .btn {
   background-color: rgba(216, 226, 220, 1);
   color: black;
   border: none;
   margin-left: 1rem;
+  margin-bottom: 2rem;
 }
 
 .color-nav {
@@ -37,7 +58,7 @@ h1{ /* Page header, ex:Appointment form for schedule page*/
   background-color: rgb(178, 179, 178);
 }
 
-.card {
+.portfolioCardSize {
   width: 240px;
 }  
 

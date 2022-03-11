@@ -8,17 +8,16 @@ import Nav from 'react-bootstrap/Nav';
 
 export default function Header() {
   return (
-    <Navbar className="color-nav" >
-      <Container className="fixPosition navPosition">
+    <Navbar className="color-nav" expand="sm">
+      <Container className="fixPosition">
         <LinkContainer to="/">
           <Navbar.Brand>
             <img
-              alt=""
+              alt="INKD logo"
               src="img/logo.png"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{' '} INKD
+              className="d-inline-block align-top logoSize"
+            />{' '}
+            <span className="logoFont">INKD</span>
           </Navbar.Brand></LinkContainer>
         <Nav className=".ms-auto">
           <LinkContainer to="/Map"><Nav.Link>Map</Nav.Link></LinkContainer>
