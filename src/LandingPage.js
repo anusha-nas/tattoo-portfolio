@@ -4,15 +4,13 @@ function Card(props) {
     const { cardTitle, cardImg, cardAlt, cardIntro, cardContent } = props.card;
 
     return (
-        <div className="row content-row">
-            <div className="col">
-                <div className="card">
-                    <div className="card-body">
-                        <p className="card-title">{cardTitle}</p>
-                        <img src={cardImg} alt={cardAlt} className="shop-img" />
-                        <p className="card-subtitle mb-2 text-muted">{cardIntro}</p>                         
-                        <p className="card-text">{cardContent}</p>
-                    </div>
+        <div className="col col-12 col-md-6 col-lg-4 col-xl-4 d-flex">
+            <div className="card">
+                <div className="card-body">
+                    <p className="card-title">{cardTitle}</p>
+                    <img src={cardImg} alt={cardAlt} className="shop-img" />
+                    <p className="card-subtitle mb-2 text-muted">{cardIntro}</p>                         
+                    <p className="card-text">{cardContent}</p>
                 </div>
             </div>
         </div>
@@ -34,7 +32,9 @@ export default function LandingPage(props) {
                 </div>
             </div>
 
-            { cardArray }
+            <div className="row content-row">
+                { cardArray }
+            </div>
 
             <div className="row">
                 <div className="col">

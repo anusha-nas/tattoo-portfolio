@@ -59,8 +59,8 @@ export default function App(props) {
           </Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

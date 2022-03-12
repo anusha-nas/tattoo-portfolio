@@ -1,34 +1,28 @@
 /* Styling for all pages */
+
 * {
     box-sizing: border-box;
     font-family: 'montserrat', sans-serif;
 }
 
-/* Default for mobile */
+/* Defaults for mobile */
 
-#map {
-  height: 300px;
-  width: 400px;
+main {
+  padding: 4rem;
 }
 
+h1{ /* Page header, ex:Appointment form for schedule page*/
+  padding: 2rem;
+}
+
+/* Navigation Bar */
 .logoSize {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
 }
 
 .logoFont{
   font-size: 2em;
-}
-
-@media (min-width: 768px){
-  .logoSize{
-    width: 30px;
-    height: 30px;
-  }
-
-  .logoFont {
-    font-size: 1em;
-  }
 }
 
 .btn {
@@ -43,24 +37,21 @@
   background-color: rgba(216, 226, 220, 1);
 }
 
-main {
-  padding: 4rem;
-}
-
-h1{ /* Page header, ex:Appointment form for schedule page*/
-  padding: 2rem;
+/* Map Page */
+.map {
+  height: 670px; /* do not show the footer on mobile view */
+  width: 100%;
 }
 
 /* Account Page */
-
 .color-account {
   box-sizing: border-box;
   background-color: rgb(178, 179, 178);
 }
 
-.portfolioCardSize {
+.portfolio-card-size {
   width: 240px;
-}  
+}
 
 /* Edit Profile/Account Pages */
 .custom-file-upload {
@@ -73,7 +64,7 @@ h1{ /* Page header, ex:Appointment form for schedule page*/
   padding-bottom: 2rem;
 }
 
-/* Home Page */
+/* HomeLanding Page */
 .shop-img { /* home page shop images */
   height: 150px;
   width: 150px;
@@ -104,16 +95,12 @@ h1{ /* Page header, ex:Appointment form for schedule page*/
   font-size: 0.9rem;
 }
 
+/*
 .to-portfolios {
   color: black;
   text-decoration: none;
 }
-
-/* Map */
-.map {
-  height: 600px;
-}
-
+*/
 
 /* Portfolios */
 .card-img-top {
@@ -126,12 +113,94 @@ h1{ /* Page header, ex:Appointment form for schedule page*/
   padding-top: 4rem;
 }
 
-@media (min-width: 992px){
-  h1{
-      font-size:3rem;
+/* Footer */
+.footer {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+
+/* Media queries for larger screens */
+
+/* for screen size at least 768px */
+@media (min-width: 768px){
+  .logoSize{
+    width: 30px;
+    height: 30px;
+  }
+
+  .logoFont {
+    font-size: 1em;
+  }
+
+  #root {
+    height: 100%;
   }
 
   .map {
-    height: 800px;
+    height: 600px;
+    width: 100%;
   }
+}
+
+/* for screen size at least 992 */
+@media (min-width: 992px){
+  h1 {
+      font-size: 2.5rem;
+  }
+
+  .line-homepg {
+    font-size: 2.5rem;
+  }
+
+  .card-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .logoSize {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logoFont{
+    font-size: 1.7rem;
+  }
+
+  nav {
+    font-size: 1.5rem;
+  }
+
+  .shop-img { /* home page shop images */
+    height: 250px;
+    width: 250px;
+  }
+
+  .map {
+    height: 590px;
+    width: 100%;
+  }
+}
+
+/* for screen size at least 1200 */
+@media (min-width: 1200px){
+  .logoSize {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .logoFont{
+    font-size: 2.2rem;
+  }
+
+  nav {
+    font-size: 2rem;
+  }
+
+  .map {
+    height: 580px;
+    width: 100%;
+  }
+}
+
+/* for screen size at least 1400 */
+@media (min-width: 1400px){
 }

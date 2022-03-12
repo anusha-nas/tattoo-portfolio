@@ -13,7 +13,7 @@ function SingleCard(props) {
     return (
         <Col>
             <div>
-                <Card className="portfolioCardSize">
+                <Card className="portfolio-card-size">
                     <Card.Img variant="top" src={portfolioObject.cardPhoto} />
                     <Card.Body>
                         <Card.Title>{portfolioObject.cardArtist}</Card.Title>
