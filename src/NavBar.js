@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav';
 
 
-export default function Header() {
+export default function NavBar() {
   return (
     <Navbar className="color-nav" expand="sm">
       <Container className="fixPosition">
@@ -20,6 +20,7 @@ export default function Header() {
             <span className="logoFont">INKD</span>
           </Navbar.Brand></LinkContainer>
         <Nav className=".ms-auto">
+          <LinkContainer to="/Home"><Nav.Link>Home</Nav.Link></LinkContainer>
           <LinkContainer to="/Map"><Nav.Link>Map</Nav.Link></LinkContainer>
           <LinkContainer to="/Portfolios"><Nav.Link>Portfolios</Nav.Link></LinkContainer>
           <LinkContainer to="/Favorites"><Nav.Link>Favorites</Nav.Link></LinkContainer>
@@ -30,4 +31,3 @@ export default function Header() {
     </Navbar>
   );
 }
-
