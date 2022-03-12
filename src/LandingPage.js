@@ -1,6 +1,9 @@
 import React from 'react';
 
+// define a function to return a single card for the home page
 function Card(props) {
+
+    // deconstructure a single card with the properties title, image, alt text, intro, and content
     const { cardTitle, cardImg, cardAlt, cardIntro, cardContent } = props.card;
 
     return (
@@ -17,7 +20,10 @@ function Card(props) {
     )
 }
 
+// takes an array of cards and render them along with other information on the home page
 export default function LandingPage(props) {
+    // apply the single card function defined above on each single one card in the given card props,
+    // then return the results as an array
     const cardArray = props.cards.map((aCard) => {
         const cardElem = <Card card={ aCard } key={ aCard.cardTitle } />
         return cardElem

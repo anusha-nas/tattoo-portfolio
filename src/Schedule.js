@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import AppointmentList from "./AppointmentList";
 
+// parameter props refers to an array of appointments
 export default function Schedule(props) {
 
 
@@ -38,6 +39,7 @@ export default function Schedule(props) {
     const handleBudget = (event) => {
         setBudget(event.target.value);
     }
+
 
     //save user submission
     const handleSubmit = (event) => {
@@ -153,5 +155,4 @@ export default function Schedule(props) {
             </div>
         </div>
     );
-
 }
