@@ -4,15 +4,6 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 
-/*
-import Form from 'react-bootstrap/Form'
-import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
-
-import EditAccountInfo from "./EditAccountInfo";
-import EditProfile from "./EditProfile";
-*/
-
 export default function Account() {
     return (
         <div>
@@ -27,9 +18,6 @@ export default function Account() {
                                     <Card.Text>Full Name: "Megan Fox</Card.Text>
                                     <Card.Text>Email address: megan-tattoos@uw.edu</Card.Text>
                                     <Card.Text>Location: Seattle, WA</Card.Text>
-
-                                    {/* <Link to="/EditAccountInfo" className="btn btn-primary">Edit Account Info</Link>
-                                    <Link to="EditProfile" className="btn btn-primary">Edit Portfolio</Link> */}
                                 </Card.Body>
                             </Card>
                         </div>

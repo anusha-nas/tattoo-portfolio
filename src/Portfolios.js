@@ -39,7 +39,7 @@ export default function Portfolios(props) {
     // defines a function to update a portfolio card's favorited attribute if the card is clicked
     const handleClick = (event) => {
         let updateFavCard = fav.map((card) => {
-            if (event.target.id == card.cardArtist) {
+            if (event.target.id === card.cardArtist) {
                 card.favorited = true;
             }
             return card;
@@ -58,10 +58,12 @@ export default function Portfolios(props) {
 
     // create portfolio cards for portfolios objects whose favorited attribute is true
     const favCardArray = fav.map((card) => {
-        if (card.favorited == true) {
-            const favCard = <SingleCard portfolio={card} key={card.cardArtist} onClick={handleClick} />
-            return favCard
+        let favCard = null;
+        if (card.favorited === true) {
+            favCard = <SingleCard portfolio={card} key={card.cardArtist} onClick={handleClick} />
+           
         }
+        return favCard
     })
 
     return (

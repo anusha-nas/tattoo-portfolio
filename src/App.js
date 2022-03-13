@@ -2,23 +2,17 @@ import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 
-import NavBar from "./NavBar";
+import Header from "./Header";
 import LandingPage from "./LandingPage";
 import Map from "./Map";
 import Portfolios from "./Portfolios";
 import Schedule from "./Schedule";
 import Account from "./Account";
 import Footer from "./Footer";
-// import _ from 'lodash';
-// import EditAccountInfo from "./EditAccountInfo";
-// import EditProfile from "./EditProfile";
-import FavoriteCard from './Portfolios';
-
 
 import CARDS from './data/Cards.json';
 import MAPINFO from './data/MapInfo.json';
 import SAMPLEPORTFOLIO from './data/Port.json';
-// import { copyFile } from 'fs/promises';
 
 export default function App(props) {
 
@@ -47,28 +41,9 @@ export default function App(props) {
     setAppointments([...appointments, newAppt]);
   }
 
-
-
-  // const [fav, setFav] = useState(SAMPLEPORTFOLIO);
-
-  // const handleClick = function () {
-  //   let updateCards = fav.map((card) => {
-  //     card.favorited = true;
-  //     return card;
-  //   })
-  //   setFav(updateCards);
-  // }
-  //   setFav(true);
-  //   console.log(event);
-  //   console.log(fav);
-  // }
-
   return (
     <div>
-
-      <NavBar />
-
-      { /* main section */}
+      <Header />
       <div className="container-fluid">
         <Routes>
           <Route path="/" element={<LandingPage cards={CARDS} />} />
@@ -77,15 +52,11 @@ export default function App(props) {
           <Route path="Portfolios" element={<Portfolios samplePortfolios={SAMPLEPORTFOLIO} />} />
           <Route path="Schedule" element={<Schedule appointments={appointments} addApptCallback={addAppt} />} />
           <Route path="Account" element={<Account />}>
-            {/* <Route path=":EditAccountInfo" element={<EditAccountInfo />} />    
-          <Route path=":EditProfile" element={<EditProfile />} />    */}
           </Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
-
       <Footer />
-
     </div>
   );
 }

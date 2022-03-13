@@ -34,7 +34,7 @@ export default function LandingPage(props) {
 
             <div className="row">
                 <div className="col">
-                    <span className="line-homepg">Popular Artists</span>
+                    <span className="line-homepg">Popular Shops</span>
                 </div>
             </div>
 
