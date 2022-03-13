@@ -2,6 +2,10 @@
 
 Welcome to the tattoo-portfolio!
 
+This is our web app for info 340. Use tattoo-portfolio to browse and favorite tattoo portfolios, make tattoo appointments and view your schedule, as well as explore for artists by location using map feature. 
+
+Project by Anusha Nasrulai, Helen Li, Roshani Ravi.
+
 You need to install the following libraries for the react applications:
 
 * Run `npm install` to install react dependencies
