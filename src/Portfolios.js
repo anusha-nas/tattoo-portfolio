@@ -13,7 +13,7 @@ export function SingleCard(props) {
 
     return (
         <Col>
-            <div>
+            <div className="space-portfolios">
                 <Card className="portfolio-card-size">
                     <Card.Img variant="top" src={portfolioObject.cardPhoto} />
                     <Card.Body>
@@ -22,7 +22,7 @@ export function SingleCard(props) {
                         <Card.Text>
                             {portfolioObject.cardText}
                         </Card.Text>
-                        <Button variant="primary" onClick={props.onClick} id={portfolioObject.cardArtist}> Add to Favorites</Button>
+                        <Button variant="primary" onClick={props.onClick} id={portfolioObject.cardArtist}> Favorite</Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -68,7 +68,7 @@ export default function Portfolios(props) {
         <div>
             <h1>Portfolios</h1>
             <Container>
-                <Row>
+                <Row xs={1} sm={2} md={3}>
                     {cardElementArray}
                 </Row>
             </Container>
