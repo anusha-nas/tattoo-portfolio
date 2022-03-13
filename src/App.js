@@ -6,7 +6,6 @@ import NavBar from "./NavBar";
 import LandingPage from "./LandingPage";
 import Map from "./Map";
 import Portfolios from "./Portfolios";
-import Favorites from "./Favorites";
 import Schedule from "./Schedule";
 import Account from "./Account";
 import Footer from "./Footer";
@@ -69,14 +68,13 @@ export default function App(props) {
 
       <NavBar />
 
-      { /* main section */ }
+      { /* main section */}
       <div className="container-fluid">
         <Routes>
           <Route path="/" element={<LandingPage cards={CARDS} />} />
           <Route path="Home" element={<LandingPage cards={CARDS} />} />
           <Route path="Map" element={<Map popups={MAPINFO} />} />
           <Route path="Portfolios" element={<Portfolios samplePortfolios={SAMPLEPORTFOLIO} />} />
-          {/* <Route path="Favorites" element={<Favorites samplePortfolios={SAMPLEPORTFOLIO} handleClick={handleClick} />} /> */}
           <Route path="Schedule" element={<Schedule appointments={appointments} addApptCallback={addAppt} />} />
           <Route path="Account" element={<Account />}>
             {/* <Route path=":EditAccountInfo" element={<EditAccountInfo />} />    

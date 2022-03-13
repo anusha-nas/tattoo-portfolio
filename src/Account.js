@@ -1,6 +1,7 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card'
+import EditAccountInfo from "./EditAccountInfo";
 
 /*
 import Form from 'react-bootstrap/Form'
@@ -25,12 +26,12 @@ export default function Account() {
                                     <Card.Text>Full Name: "Megan Fox</Card.Text>
                                     <Card.Text>Email address: megan-tattoos@uw.edu</Card.Text>
                                     <Card.Text>Location: Seattle, WA</Card.Text>
-                                    <Link to="EditAccountInfo" className="btn btn-primary">Edit Account Info</Link>
+                                    <Link to="/EditAccountInfo" className="btn btn-primary">Edit Account Info</Link>
                                     <Link to="EditProfile" className="btn btn-primary">Edit Portfolio</Link>
                                 </Card.Body>
-                            </Card>  
+                            </Card>
                         </div>
-                     </div>
+                    </div>
                 </div>
             </div>
         </div>

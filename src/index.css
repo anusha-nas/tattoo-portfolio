@@ -140,6 +140,12 @@ h1{ /* Page header, ex:Appointment form for schedule page*/
     height: 600px;
     width: 100%;
   }
+
+  .navbar-nav{
+    position:fixed;
+    right: 0;
+  }
+
 }
 
 /* for screen size at least 992 */
