@@ -37,7 +37,6 @@ export default function App(props) {
       tattoo: tattoo,
       budget: budget
     }
-
     setAppointments([...appointments, newAppt]);
   }
 

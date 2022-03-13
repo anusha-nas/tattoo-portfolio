@@ -41,7 +41,7 @@
         "cardPhoto": "/img/eva.png",
         "cardAlt": "Eva's work",
         "cardIntro": "Seattle, WA",
-        "cardText": "Eva is a wonderful addition to our shop. She has a bachelor's in fine arts, and really loves drawing animals, plants and illustrative tattoos. She has been tattooing for 2 years.",
+        "cardText": "Eva is a wonderful addition to our shop. She has a bachelor's in fine arts, and really loves drawing animals and plants tattoos. She has been tattooing for 2 years.",
         "favorited": false
     },
     {
@@ -50,7 +50,7 @@
         "cardPhoto": "/img/pingping.png",
         "cardAlt": "PingPing's work",
         "cardIntro": "Seattle, WA",
-        "cardText": "I will not be taking on any projects involving coverups or existing pieces. Requests of artwork on faces, fingers, or lips are not accepted. Once you submit your request, your proposal will be reviewed.",
+        "cardText": "I will not be taking on any projects involving coverups. No tattoo requests on faces or lips. Once you submit your request, your proposal will be reviewed.",
         "favorited": false
     }
 ]

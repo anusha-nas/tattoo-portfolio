@@ -9,7 +9,6 @@ export default function Header() {
   return (
     <Navbar className="color-nav" expand="sm">
       <Container className="fixPosition">
-
         <LinkContainer to="/">
           <Navbar.Brand>
             <img
@@ -20,7 +19,6 @@ export default function Header() {
             <span className="logoFont">INKD</span>
           </Navbar.Brand>
         </LinkContainer>
-
         <Nav className=".ms-auto">
           <LinkContainer to="/Home"><Nav.Link>Home</Nav.Link></LinkContainer>
           <LinkContainer to="/Map"><Nav.Link>Map</Nav.Link></LinkContainer>
@@ -28,7 +26,6 @@ export default function Header() {
           <LinkContainer to="/Schedule"><Nav.Link>Schedule</Nav.Link></LinkContainer>
           <LinkContainer to="/Account"><Nav.Link>Account</Nav.Link></LinkContainer>
         </Nav>
-
       </Container>
     </Navbar>
   );

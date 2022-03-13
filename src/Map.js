@@ -22,7 +22,7 @@ export default function Map(props) {
     // apply the popmarker function defined above on each one of the given location,
     // then returns results in an array
     const popupArray = props.popups.map((aPopup) => {
-        return <PopMarker popup={ aPopup } key={ aPopup.location } />
+        return <PopMarker popup={aPopup} key={aPopup.location} />
     });
 
     return (
@@ -31,9 +31,7 @@ export default function Map(props) {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-
             {popupArray}
-
         </MapContainer>
     )
 }

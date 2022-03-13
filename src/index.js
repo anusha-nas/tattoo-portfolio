@@ -11,7 +11,7 @@ import APPOINTMENTS from "./data/Appointments.json";
 
 ReactDOM.render(
   <BrowserRouter>
-        <App appointments={APPOINTMENTS}/>
+    <App appointments={APPOINTMENTS} />
   </BrowserRouter>,
   document.getElementById('root')
 );

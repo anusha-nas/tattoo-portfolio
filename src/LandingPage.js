@@ -12,7 +12,7 @@ function Card(props) {
                 <div className="card-body">
                     <p className="card-title">{cardTitle}</p>
                     <img src={cardImg} alt={cardAlt} className="shop-img" />
-                    <p className="card-subtitle mb-2 text-muted">{cardIntro}</p>                         
+                    <p className="card-subtitle mb-2 text-muted">{cardIntro}</p>
                     <p className="card-text">{cardContent}</p>
                 </div>
             </div>
@@ -25,23 +25,20 @@ export default function LandingPage(props) {
     // apply the single card function defined above on each single one card in the given card props,
     // then return the results as an array
     const cardArray = props.cards.map((aCard) => {
-        const cardElem = <Card card={ aCard } key={ aCard.cardTitle } />
+        const cardElem = <Card card={aCard} key={aCard.cardTitle} />
         return cardElem
     });
 
     return (
         <div className="container-fluid">
-
             <div className="row">
                 <div className="col">
                     <span className="line-homepg">Popular Shops</span>
                 </div>
             </div>
-
             <div className="row content-row">
-                { cardArray }
+                {cardArray}
             </div>
-
             <div className="row">
                 <div className="col">
                     <span className="line-homepg">Tattooing Process</span>

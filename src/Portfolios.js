@@ -61,7 +61,7 @@ export default function Portfolios(props) {
         let favCard = null;
         if (card.favorited === true) {
             favCard = <SingleCard portfolio={card} key={card.cardArtist} onClick={handleClick} />
-           
+
         }
         return favCard
     })
@@ -74,7 +74,6 @@ export default function Portfolios(props) {
                     {cardElementArray}
                 </Row>
             </Container>
-
             <h1>Favorites</h1>
             <div className="d-flex">
                 {favCardArray}

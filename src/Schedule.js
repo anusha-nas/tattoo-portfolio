@@ -5,7 +5,6 @@ import AppointmentList from "./AppointmentList";
 // parameter props refers to an array of appointments
 export default function Schedule(props) {
 
-
     //state function for each field of form
     const [apptType, setApptType] = useState(false);
     const [date, setDate] = useState("");
@@ -14,7 +13,6 @@ export default function Schedule(props) {
     const [email, setEmail] = useState("");
     const [tattoo, setTattoo] = useState("");
     const [budget, setBudget] = useState("");
-
 
     //create a callback function that updates the current value in the form to the
     //state variable above, add this as a callback to an onChange event to <input>/<form control>
@@ -40,7 +38,6 @@ export default function Schedule(props) {
         setBudget(event.target.value);
     }
 
-
     //save user submission
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -58,7 +55,6 @@ export default function Schedule(props) {
         setBudget("");
     }
 
-
     return (
         <div className="container-fluid">
             <div className="row">
@@ -68,82 +64,82 @@ export default function Schedule(props) {
                         <div className="form-group">
                             <label className="control-label ">
                                 Appointment type?
-                    </label>
+                            </label>
                             <div className="form-group">
                                 <div className="radio">
                                     <label className="radio">
                                         <input name="radio" type="radio" value="Consultation" checked={apptType} onChange={handleApptType} />
                                         Consultation
-                            </label>
+                                    </label>
                                 </div>
                                 <div className="radio">
                                     <label className="radio">
                                         <input name="radio" type="radio" value="Tattoo Appointment" />
                                         Tattoo Appointment
-                            </label>
+                                    </label>
                                 </div>
                             </div>
                         </div>
                         <div className="form-group ">
                             <label className="control-label " htmlFor="date">
                                 Date
-                    </label>
+                            </label>
                             <input className="form-control" id="date" name="date" placeholder="MM/DD/YYYY" value={date}
                                 type="text" onChange={handleDate} />
                         </div>
                         <div className="form-group">
                             <label className="control-label " htmlFor="select">
                                 Time
-                    </label>
+                            </label>
                             <select className="form-select" id="select" name="select" value={time} onChange={handleTime}>
                                 <option>
                                     Pick a time
-                        </option>
+                                </option>
                                 <option>
                                     9:00 am
-                        </option>
+                                </option>
                                 <option>
                                     12:00 pm
-                        </option>
+                                </option>
                                 <option>
                                     3:00 pm
-                        </option>
+                                </option>
                                 <option>
                                     6:00 pm
-                        </option>
+                                </option>
                             </select>
                         </div>
                         <div className="form-group">
                             <label className="control-label " htmlFor="name">
                                 Full Name
-                    </label>
+                            </label>
                             <input className="form-control" id="name" name="name" type="text" placeholder="Megan Fox" value={name} onChange={handleName} />
                         </div>
                         <div className="form-group">
                             <label className="control-label requiredField" htmlFor="email">
                                 Email
-                    </label>
+                            </label>
                             <input className="form-control" id="email" name="email" type="text" placeholder="megan-tattoos@uw.edu" value={email} onChange={handleEmail} />
                         </div>
                         <div className="form-group">
                             <label className="control-label requiredField" htmlFor="tattoo">
                                 Tattoo
-                    </label>
+                            </label>
                             <input className="form-control" id="tattoo" name="tattoo" type="text" value={tattoo} onChange={handleTattoo} />
                             <span className="help-block" id="hint_subject1">
                                 Describe the tattoo you would like to get. Is it a custom design or from the
                                 artist's portfolio? Placement? Size?
-                    </span>
+                            </span>
                         </div>
                         <div className="form-group">
                             <label className="control-label requiredField" htmlFor="budget">
                                 Budget
-                    </label>
+                            </label>
                             <input className="form-control" id="budget" name="budget" type="text" value={budget} onChange={handleBudget} />
                             <span className="help-block" id="hint_subject1">
                                 Provide your maximum budget for the tattoo. Note the artist's minimum fee. Artist
                                 will contact you with more information on pricing based on your response.
-                    </span>
+                            </span>
                         </div>
                         <button className="btn ">Submit</button>
                     </form>

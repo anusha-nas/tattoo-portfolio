@@ -103,7 +103,7 @@ h1{
 /* Portfolios */
 .portfolio-card-size {
   width: 240px;
-  height: 660px;
+  height: auto;
 }
 
 .card-img-top {
@@ -141,13 +141,7 @@ h1{
 
   .map {
     height: 600px;
-    width: 100%;
   }
-
-  .navbar-nav{
-    right: 0;
-  }
-
 }
 
 /* for screen size at least 992 */
@@ -177,14 +171,13 @@ h1{
     font-size: 1.5rem;
   }
 
-  .shop-img { /* home page shop images */
+  .shop-img {
     height: 250px;
     width: 250px;
   }
 
   .map {
     height: 590px;
-    width: 100%;
   }
 }
 
@@ -205,10 +198,5 @@ h1{
 
   .map {
     height: 580px;
-    width: 100%;
   }
-}
-
-/* for screen size at least 1400 */
-@media (min-width: 1400px){
 }
