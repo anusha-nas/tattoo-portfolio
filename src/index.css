@@ -142,7 +142,7 @@ h1{ /* Page header, ex:Appointment form for schedule page*/
   }
 
   .navbar-nav{
-    position:fixed;
+    /* position:fixed; */
     right: 0;
   }
 
