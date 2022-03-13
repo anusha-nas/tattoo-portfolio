@@ -6,34 +6,37 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import SingleCard from './Portfolios';
 
-export default function Favorites(props) {
-    return (
-        <div>
-            <h1>Favorites</h1>
-            <div className="container fluid">
-                <div className="col">
-                    <span id="reservations">Favorites</span>
-                </div>
-            </div>
-            <Container fluid>
-                <Row>
-                    <Col>
-                        <div>
-                            <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src="/img/moonlight.png" />
-                                <Card.Body>
-                                    <Card.Title>Moonlight Ink</Card.Title>
-                                    <Card.Text>
-                                        Appointment Only. Please contact schedule with a specific artist directly.
-                                </Card.Text>
-                                    <Button variant="primary">More Info</Button>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
-    );
-}
+
+// export default function Favorites(props) {
+
+//     let allCards = props.samplePortfolios;
+//     let favCard = allCards.filter(singleCardObj => singleCardObj.favorited == true);
+//     console.log(favCard);
+
+//     // const favCardElementArray = allCards.map((card) => {
+//     //     if (card.favorited == true) {
+//     //         favCard.push(card);
+//     //     }
+//     // });
+
+//     const favCardElement = favCard.map((card) => {
+//         return <SingleCard portfolio={card} key={card.cardArtist} />
+//     });
+
+//     // const cardElementArray = portfolioInfoArray.map((portObject) => {
+//     //     const oneCard = <SingleCard portfolio={portObject} key={portObject.cardArtist} handleClick={handleClick} />
+//     //     return oneCard
+//     // });
+
+//     return (
+//         <div>
+//             <h1>Favorites</h1>
+//             {favCardElement}
+//         </div>
+//     );
+// }
+
+
+// // handleClick={props.handleClick}

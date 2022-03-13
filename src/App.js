@@ -9,12 +9,16 @@ import Favorites from "./Favorites";
 import Schedule from "./Schedule";
 import Account from "./Account";
 import Footer from "./Footer";
+// import _ from 'lodash';
 // import EditAccountInfo from "./EditAccountInfo";
 // import EditProfile from "./EditProfile";
+import FavoriteCard from './Portfolios';
+
 
 import CARDS from './data/Cards.json';
 import MAPINFO from './data/MapInfo.json';
 import SAMPLEPORTFOLIO from './data/Port.json';
+// import { copyFile } from 'fs/promises';
 
 export default function App(props) {
 
@@ -43,6 +47,22 @@ export default function App(props) {
     setAppointments([...appointments, newAppt]);
   }
 
+
+
+  // const [fav, setFav] = useState(SAMPLEPORTFOLIO);
+
+  // const handleClick = function () {
+  //   let updateCards = fav.map((card) => {
+  //     card.favorited = true;
+  //     return card;
+  //   })
+  //   setFav(updateCards);
+  // }
+  //   setFav(true);
+  //   console.log(event);
+  //   console.log(fav);
+  // }
+
   return (
     <div>
       <Header />
@@ -51,7 +71,7 @@ export default function App(props) {
           <Route path="/" element={<LandingPage cards={CARDS} />} />
           <Route path="Map" element={<Map popups={MAPINFO} />} />
           <Route path="Portfolios" element={<Portfolios samplePortfolios={SAMPLEPORTFOLIO} />} />
-          <Route path="Favorites" element={<Favorites />} />
+          {/* <Route path="Favorites" element={<Favorites samplePortfolios={SAMPLEPORTFOLIO} handleClick={handleClick} />} /> */}
           <Route path="Schedule" element={<Schedule appointments={appointments} addApptCallback={addAppt} />} />
           <Route path="Account" element={<Account />}>
             {/* <Route path=":EditAccountInfo" element={<EditAccountInfo />} />    
@@ -64,4 +84,3 @@ export default function App(props) {
     </div>
   );
 }
-

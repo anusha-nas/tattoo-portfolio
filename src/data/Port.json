@@ -1,23 +1,29 @@
 [
     {
-        "cardArtist": "Moonlight Ink",
+        "cardArtist": "Holly Black",
+        "cardShop": "Moonlight Ink",
         "cardPhoto": "/img/moonlight.png",
         "cardAlt": "the tattoo shop of Moonlight Ink",
         "cardIntro": "Seattle, WA",
-        "cardText": "This is such a clean place. Artists are very professional. They want to work with you to offer what you want. Got good quality tattoos several times from this place :)"
+        "cardText": "This is such a clean place. Artists are very professional. They want to work with you to offer what you want. Got good quality tattoos several times from this place :)",
+        "favorited": false
     },
     {
-        "cardArtist": "TT661 Tatto",
+        "cardArtist": "Luna Webber",
+        "cardShop": "TT661 Tattoo",
         "cardPhoto": "/img/661.jpg",
         "cardAlt": "the tattoo shop of TT661 Tattoo",
         "cardIntro": "9+ years in business | Seattle, WA",
-        "cardText": "Artist Luna Webber works in this field for almost ten years. She always draws attention to details which makes her a great choice for working with your own designs. As she likes to take a surgeon-like approach when working with you to create great art, you are really in good hands."
+        "cardText": "Artist Luna Webber works in this field for almost ten years. She always draws attention to details which makes her a great choice for working with your own designs. As she likes to take a surgeon-like approach when working with you to create great art, you are really in good hands.",
+        "favorited": false
     },
     {
-        "cardArtist": "Fall Lake",
+        "cardArtist": "Fawn Green",
+        "cardShop": "Fall Lake",
         "cardPhoto": "/img/fall_lake.jpg",
         "cardAlt": "the tattoo shop of Fall Lake",
         "cardIntro": "3+ years in business | Capitol Hill, WA",
-        "cardText": "The artists at this tatto shop take good care of their clients and provides their needs. If you are not sure, just go for a consultation. You won't regret!"
+        "cardText": "The artists at this tatto shop take good care of their clients and provides their needs. If you are not sure, just go for a consultation. You won't regret!",
+        "favorited": false
     }
 ]
