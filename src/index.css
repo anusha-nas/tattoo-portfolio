@@ -51,6 +51,11 @@ h1{
   background-color: rgb(178, 179, 178);
 }
 
+.portfolio-card-size {
+  width: 240px;
+  height: auto;
+}
+
 .account-edit {
   margin-top: 2rem;
 }
@@ -78,6 +83,10 @@ h1{
 .content-row {
   padding-top: 1rem;
   font-weight: 300;
+}
+
+.space-portfolios {
+  margin-bottom: 2rem;
 }
 
 .card-title {

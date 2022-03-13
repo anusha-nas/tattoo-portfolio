@@ -25,5 +25,32 @@
         "cardIntro": "3+ years in business | Capitol Hill, WA",
         "cardText": "The artists at this tatto shop take good care of their clients and provides their needs. If you are not sure, just go for a consultation. You won't regret!",
         "favorited": false
+    },
+    {
+        "cardArtist": "Naia Shedd",
+        "cardShop": "Private Studio",
+        "cardPhoto": "/img/naia.png",
+        "cardAlt": "Example of Naia's work",
+        "cardIntro": "Fremont, WA",
+        "cardText": "I’m Naia! I’ve been tattooing in the Seattle area for about 3 years. My private tattoo studio is in Ballard, Seattle. I am only tattooing part time. I am also a graphic designer!",
+        "favorited": false
+    },
+    {
+        "cardArtist": "Eva Ouchie",
+        "cardShop": "Fenix Tattoo and Piercing",
+        "cardPhoto": "/img/eva.png",
+        "cardAlt": "Eva's work",
+        "cardIntro": "Seattle, WA",
+        "cardText": "Eva is a wonderful addition to our shop. She has a bachelor's in fine arts, and really loves drawing animals, plants and illustrative tattoos. She has been tattooing for 2 years.",
+        "favorited": false
+    },
+    {
+        "cardArtist": "PingPing",
+        "cardShop": "NieU Studio",
+        "cardPhoto": "/img/pingping.png",
+        "cardAlt": "PingPing's work",
+        "cardIntro": "Seattle, WA",
+        "cardText": "I will not be taking on any projects involving coverups or existing pieces. Requests of artwork on faces, fingers, or lips are not accepted. Once you submit your request, your proposal will be reviewed.",
+        "favorited": false
     }
 ]
