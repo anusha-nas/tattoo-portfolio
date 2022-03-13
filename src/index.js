@@ -7,11 +7,11 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 
-import Appointments from "./data/Appointments.json";
+import APPOINTMENTS from "./data/Appointments.json";
 
 ReactDOM.render(
   <BrowserRouter>
-        <App appointments={Appointments}/>
+        <App appointments={APPOINTMENTS}/>
   </BrowserRouter>,
   document.getElementById('root')
 );

@@ -1,9 +1,10 @@
 import React from 'react';
 
-
 //create appointment card for user inputted form data
 function AppointmentCard(props) {
+    // a single appointment object
     const apptObj = props.appointment;
+
     return (
         <div>
             <div>

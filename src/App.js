@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
-import Header from "./Header";
+
+import NavBar from "./NavBar";
 import LandingPage from "./LandingPage";
 import Map from "./Map";
 import Portfolios from "./Portfolios";
@@ -65,10 +66,14 @@ export default function App(props) {
 
   return (
     <div>
-      <Header />
+
+      <NavBar />
+
+      { /* main section */ }
       <div className="container-fluid">
         <Routes>
           <Route path="/" element={<LandingPage cards={CARDS} />} />
+          <Route path="Home" element={<LandingPage cards={CARDS} />} />
           <Route path="Map" element={<Map popups={MAPINFO} />} />
           <Route path="Portfolios" element={<Portfolios samplePortfolios={SAMPLEPORTFOLIO} />} />
           {/* <Route path="Favorites" element={<Favorites samplePortfolios={SAMPLEPORTFOLIO} handleClick={handleClick} />} /> */}
@@ -79,8 +84,10 @@ export default function App(props) {
           </Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        <Footer />
       </div>
+
+      <Footer />
+
     </div>
   );
 }

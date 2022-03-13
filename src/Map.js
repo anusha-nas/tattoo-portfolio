@@ -1,7 +1,8 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
-// `props.popup` is a dictionary of the information of a single popup location
+// takes the information of a single popup location as parameter
+// returns a popup element for that single location
 function PopMarker(props) {
 
     const { location, shopName, businessHours } = props.popup;
@@ -15,9 +16,11 @@ function PopMarker(props) {
     );
 }
 
-// `props.popups` refers to the entire MapInfo data, the information of all 3 shops for popup
+// takes an array of locations and renders a map of center Seattle with location information popups
 export default function Map(props) {
 
+    // apply the popmarker function defined above on each one of the given location,
+    // then returns results in an array
     const popupArray = props.popups.map((aPopup) => {
         return <PopMarker popup={ aPopup } key={ aPopup.location } />
     });

@@ -8,11 +8,11 @@ import { Button } from 'react-bootstrap';
 export function SingleCard(props) {
 
     const portfolioObject = props.portfolio;
-    
+
     return (
         <Col>
             <div>
-                <Card className="portfolioCardSize">
+                <Card className="portfolio-card-size">
                     <Card.Img variant="top" src={portfolioObject.cardPhoto} />
                     <Card.Body>
                         <Card.Title>{portfolioObject.cardArtist}</Card.Title>
